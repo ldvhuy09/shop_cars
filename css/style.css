@@ -1,9 +1,20 @@
-/*--A Design by W3layouts 
+/*--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
 body{
 	background: #fff;
 	font-family: 'Open Sans', sans-serif;
@@ -44,7 +55,7 @@ ul.support li a {
 	text-decoration:none;
 	font-size: 1.1em;
 	color: #fff;
-	
+
 }
 .top-header-right{
 	float:right;
@@ -155,7 +166,7 @@ ul.login li a span{
 	border-bottom: none;
 	border-top: none;
 	border-right: none;
-}	
+}
 .search input[type="submit"]:active {
 	position:relative;
 }
@@ -195,7 +206,7 @@ ul {
 	border-bottom: 1px solid #ddd;
 	font-weight:700;
 }
-.menu ul li a {	
+.menu ul li a {
 	width: 100%;
 	display: block;
 	position: relative;
@@ -219,7 +230,7 @@ ul {
 }
 ul.kid-menu{
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
 ul.kid-menu li{
 	list-style: none;
@@ -254,7 +265,7 @@ ul.cute li{
 	margin: 2em 2em 0 0;
 }
 .banner-off{
-	
+
 	padding: 6em 0em 6em 2em;
 }
 .banner-matter {
@@ -275,7 +286,7 @@ ul.cute li{
 	font-size: 4.5em;
 	color: #01AFD1;
 	font-weight: 600;
-	
+
 }
 .banner-off a{
 	text-decoration:none;
@@ -372,7 +383,7 @@ width: 49%;
 }
 .elit-grid h4{
 	margin: 0;
-	font-size: 1.3em;	
+	font-size: 1.3em;
 	font-weight: 700;
 }
 .elit-grid  label{
@@ -444,7 +455,7 @@ h5.latest-product{
 }
 .chain-grid{
 	border: 1px solid #ddd;
-	position: relative;	
+	position: relative;
 	width: 30.7%;
 	margin: 0 3% 0 0;
 	padding:0;
@@ -476,12 +487,12 @@ span.reducedfrom {
 	color: #555;
 	text-decoration: line-through;
 	margin-right: 8%;
-	font-size:1.1em; 
+	font-size:1.1em;
 }
 span.actual {
-	font-weight: 500; 
+	font-weight: 500;
 	color:#1DBAA5;
-    font-weight: 700; 
+    font-weight: 700;
     font-size:1.2em;
 }
 span.dolor-left-grid{
@@ -511,7 +522,7 @@ span.dolor-left-grid{
     float:left;
 }
 .rating-star:hover {
-   background: url(../images/star.png) 0 -18px;          
+   background: url(../images/star.png) 0 -18px;
 }
 .rating-star1 {
     display: block;
@@ -536,7 +547,7 @@ span.dolor-left-grid{
 }
 .span_3_of_2 {
 	width: 54.2%;
-	margin: 0 0em 0em 3em;	
+	margin: 0 0em 0em 3em;
 }
 .single_top {
 	margin:3em 0;
@@ -1070,7 +1081,7 @@ ul.face-in-to li a span.facebook-in{
 	left: 14.7em;
 	top: 15px;
 	-webkit-apperance:none;
-}	
+}
 .sub-left-right{
 	float: left;
 	position: relative;
@@ -1166,7 +1177,7 @@ ul.face-in-to li a span.facebook-in{
 	background: #1DBAA5;
 }
 .share li img {
-	vertical-align:middle; 
+	vertical-align:middle;
 }
 .cart-b{
 	margin:3% 0;
@@ -1212,7 +1223,7 @@ select.in-drop {
 	color:#fff;
 	background:#F97E76;
 	outline:none;
-	
+
 }
 /*--responsive--*/
 @media(max-width:1440px){
@@ -1224,7 +1235,7 @@ select.in-drop {
 @media(max-width:1280px){
 .arrow-img {
 	padding: 0em 0em 0 5.5em;
-}	
+}
 .img-arrow {
 padding: 0 0 0 7.2em;
 }
@@ -1236,10 +1247,10 @@ padding: 0 0 0 4.7em;
 
 .search input[type="text"] {
 	width: 66.5%;
-}	
+}
 .logo {
 	width: 31%;
-}	
+}
 .header-bottom-right {
 	width: 45%;
 }
@@ -1356,7 +1367,7 @@ a.get-cart {
     margin:2em 0 0 0;
 }
 .menu-chain{
-   width:100%; 
+   width:100%;
 }
 .banner-off {
     padding: 7em 0em 2em 1em;
@@ -1387,7 +1398,7 @@ a.get-cart {
     float: none;
     width: 30%;
     margin: 0 auto;
-}    
+}
 .header-bottom-right {
 	width: 67%;
 }
@@ -1416,7 +1427,7 @@ a.get-cart {
     left: 11em;
     top: 15px;
 }
-.footer-bottom-cate {   
+.footer-bottom-cate {
     width: 50%;
 }
 .bottom-grid-cat{
