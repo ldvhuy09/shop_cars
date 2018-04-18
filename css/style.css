@@ -87,14 +87,15 @@ ul.support li a {
 .logo{
 	float:left;
 	width: 50%;
-  margin-top:9px;
+  margin: auto;
+  padding-left: 20px;
 }
 .logo img {
-  width: 50%;
+  width: 65%;
 }
 .header-bottom-right{
 	float: right;
-	width: 37%;
+	width: 45%;
 	text-align: center;
 	padding-top:1.7em;
 }
