@@ -8,13 +8,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 .thumbnail {
     position: relative;
 }
-
+.caption-banner {
+  position: absolute;
+  height: 100%
+  top: 50%;
+  left: 50%;
+  background-color: rgba(118, 98, 196, 0.48);
+  width: 100%;
+}
 .caption {
     position: absolute;
     top: 45%;
     left: 0;
     width: 100%;
-}
+}'style.css'
+
 body{
 	background: #fff;
 	font-family: 'Open Sans', sans-serif;
@@ -78,8 +86,11 @@ ul.support li a {
 }
 .logo{
 	float:left;
-	width: 27%;
-    margin-top:9px;
+	width: 50%;
+  margin-top:9px;
+}
+.logo img {
+  width: 50%;
 }
 .header-bottom-right{
 	float: right;
@@ -266,7 +277,8 @@ ul.cute li{
 }
 .banner-off{
 
-	padding: 6em 0em 6em 2em;
+	padding-top: 20px;
+  padding-bottom: 10px;
 }
 .banner-matter {
 	padding: 4em 2em;
@@ -281,9 +293,10 @@ ul.cute li{
 	margin: 2em 0;
 }
 .banner-off  h2{
+  text-align: left;
 	padding:  0em;
-	margin: 0;
-	font-size: 4.5em;
+	margin: 2% 0;
+	font-size: 3.7em;
 	color: #01AFD1;
 	font-weight: 600;
 
@@ -1403,14 +1416,15 @@ a.get-cart {
 	width: 67%;
 }
 .banner-bag {
-	width: 53%;
+	width: 50%%;
+  margin: auto 1%;
 }
 .banner-off {
     width: 46%;
-    padding: 2.5em 0 2em 1em;
+    padding: 0 auto;
 }
 .banner-off h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 .con-sed-grid {
     margin: 1em 0em 0 0;
@@ -1493,7 +1507,7 @@ span.on-get {
     font-size: 1.8em;
 }
 .banner-off {
-    padding: 2em 0 1em 1em;
+    padding: 0 auto;
 }
 img.banner-bag {
     width: 50% !important;
