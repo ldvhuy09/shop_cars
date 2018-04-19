@@ -471,8 +471,8 @@ h5.latest-product{
 	border: 1px solid #ddd;
 	position: relative;
 	width: 30.7%;
-	margin: 0 3% 0 0;
-	padding:0;
+	margin: 2% auto;
+	padding: 1%;
 }
 .menu-chain{
 	width:100%;

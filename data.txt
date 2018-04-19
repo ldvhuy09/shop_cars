@@ -1,7 +1,7 @@
 
 
 name: Audi Q5 2.0 2017
-image: 'images/cars/audi-q5.jpq'
+image: 'images/cars/audi-q5.jpg'
 price: 1820000000
 views: 0
 decription: 'Thiết kế tinh tế, sang trọng, khẳng định đẳng cấp của bạn'
@@ -10,10 +10,352 @@ categories: SUV
 brand: Audi
 
 name: Audi Q2 1.0 2017
-image: 'images/cars/audi-q5.jpq'
-price: 830000000
+image: 'images/cars/audi-q2.jpg'
+price: 8300000000
 views: 0
-decription: 'Thiết kế tinh tế, sang trọng, khẳng định đẳng cấp của bạn'
+decription: 'Vẻ đẹp đến từ từng chi tiết. Màu sắc hài hòa, trẻ trung, năng động'
 originally: USA
 categories: SUV
 brand: Audi
+
+name: Audi S1 2.0 2015
+image: 'images/cars/audi-s1.jpg'
+price: 1200000000
+views: 0
+decription: 'Nhỏ gọn, tinh tế, động cơ chạy êm, khả năng tăng tốc cao'
+originally: USA
+categories: SUV
+brand: Audi
+
+name: Toyota RAV4 2017
+image: 'images/cars/toyota-rav4.jpg'
+price: 1100000000
+views: 0
+decription: 'Mạnh mẽ, lôi cuốn, có khả năng vận tải cao'
+originally: Japanese
+categories: SUV
+brand: Toyota
+
+name: Audi R8 2016
+image: 'images/cars/audi-r8.jpg'
+price: 6500000000
+views: 0
+decription: 'Sang trọng, lịch lãm, quyến rủ trên từng centimet'
+originally: USA
+categories: Coupe
+brand: Audi
+
+name: Ford Galaxy 1.5 2015
+image: 'images/cars/ford-galaxy.jpg'
+price: 1200000000
+views: 0
+decription: 'Khả năng chuyên chở tốt, chinh phục mọi mặt địa hình.'
+originally: USA
+categories: MPV
+brand: Ford
+
+name: BMW 216D 2017
+image: 'images/cars/bmw-216d.jpg'
+price: 1200000000
+views: 0
+decription: 'Khả năng chuyên chở tốt, chinh phục mọi mặt địa hình.'
+originally: USA
+categories: MPV
+brand: BMW
+
+name: BMW 420i 2017
+image: 'images/cars/bmw-420i.jpg'
+price: 1600000000
+views: 0
+decription: 'Thời trang, tinh tế, quyến rũ, thiết kế năng động, trẻ trung.'
+originally: USA
+categories: Convertible
+brand: BMW
+
+name: BMW 640i 2015
+image: 'images/cars/bmw-640i.jpg'
+price: 3200000000
+views: 0
+decription: 'Thời trang, tinh tế, quyến rũ, thiết kế năng động, trẻ trung.'
+originally: USA
+categories: Coupe
+brand: BMW
+
+name: Toyota GT86 2016
+image: 'images/cars/toyota-gt86.jpg'
+price: 1200000000
+views: 0
+decription: 'Thiết kế sang trọng, màu sắc hài hòa, tươi mới.'
+originally: Japanese
+categories: Coupe
+brand: Toyota
+
+name: Lexus RC 2016
+image: 'images/cars/lexus-rc.jpg'
+price: 1200000000
+views: 0
+decription: 'Tinh tế, thanh nhã, quyến rũ.'
+originally: Japanese
+categories: Coupe
+brand: Lexus
+
+name: Audi R8 Spyder 2016
+image: 'images/cars/audi-r8-spyder.jpg'
+price: 6500000000
+views: 0
+decription: 'Hội tụ tinh hoa, sang trọng, lịch lãm, quyến rũ.'
+originally: USA
+categories: Coupe
+brand: Audi
+
+name: Ford Mustang 2015
+image: 'images/cars/ford-mustang.jpg'
+price: 1500000000
+views: 0
+decription: 'Động cơ mạnh mẽ, thiết kế sang trọng.'
+originally: USA
+categories: Coupe
+brand: Ford
+
+name: Ford Edge 2016
+image: 'images/cars/ford-edge.jpg'
+price: 1700000000
+views: 0
+decription: 'Động cơ mạnh mẽ, thiết kế sang trọng, màu sắc thanh nhã, lịch lãm.'
+originally: USA
+categories: SUV
+brand: Ford
+
+name: Ford Kuga 2017
+image: 'images/cars/ford-Kuga.jpg'
+price: 1700000000
+views: 0
+decription: 'Màu sắc tươi mới, chất lượng tuyệt hảo.'
+originally: USA
+categories: SUV
+brand: Ford
+
+name: Honda HR 2015
+image: 'images/cars/honda-hr.jpg'
+price: 800000000
+views: 0
+decription: 'Động cơ mạnh mẽ, màu sắc thanh nhã, lịch lãm.'
+originally: Japanese
+categories: SUV
+brand: Honda
+
+name: Honda CR 2015
+image: 'images/cars/honda-cr.jpg'
+price: 1200000000
+views: 0
+decription: 'Rắn chắc, mượt mà, tinh tế'
+originally: Japanese
+categories: SUV
+brand: Honda
+
+name: Mercedes G350 2016
+image: 'images/cars/mercedes-g350.jpg'
+price: 5000000000
+views: 0
+decription: 'Động cơ mạnh mẽ, thiết kế cứng cáp, sẵn sàng chinh phục thử thách.'
+originally: USA
+categories: SUV
+brand: Mercedes-Benz
+
+name: Mercedes GLC350 2017
+image: 'images/cars/mercedes-glc350.jpg'
+price: 1500000000
+views: 0
+decription: 'Động cơ mạnh mẽ, thiết kế cứng cáp, sẵn sàng vượt mọi chặng đường.'
+originally: USA
+categories: SUV
+brand: Mercedes-Benz
+
+name: Mercedes GLE400 2017
+image: 'images/cars/mercedes-gle400.jpg'
+price: 3000000000
+views: 0
+decription: 'Đẳng cấp phái mạnh, sẵn sàng vượt mọi chặng đường.'
+originally: USA
+categories: SUV
+brand: Mercedes-Benz
+
+name: Audi A3 2017
+image: 'images/cars/audi-a3.jpg'
+price: 1600000000
+views: 0
+decription: 'Thiết kế năng động, trẻ trung, động cơ mạnh mẽ, san bằng mọi địa hình.'
+originally: USA
+categories: Convertible
+brand: Audi
+
+name: Mercedes AMG 2017
+image: 'images/cars/mercedes-amg.jpg'
+price: 4000000000
+views: 0
+decription: 'Sang trọng, tinh tế, màu sắc tươi mới, nổi bật.'
+originally: USA
+categories: Convertible
+brand: Mercedes-Benz
+
+name: BMW 530e 2017
+image: 'images/cars/bmw-530e.jpg'
+price: 1200000000
+views: 0
+decription: 'Đẳng cấp thời thượng.'
+originally: USA
+categories: Sedan
+brand: BMW
+
+name: Lexus IS 2017
+image: 'images/cars/lexus-is.jpg'
+price: 1200000000
+views: 0
+decription: 'Tinh tế, thanh nhã, quyến rũ.'
+originally: Japanese
+categories: Sedan
+brand: Lexus
+
+name: Audi S3 2017
+image: 'images/cars/audi-s3.jpg'
+price: 2000000000
+views: 0
+decription: 'Năng động trẻ trung, tự tin chinh phục thử thách.'
+originally: USA
+categories: Sedan
+brand: Audi
+
+name: Lexus GS 2017
+image: 'images/cars/lexus-gs.jpg'
+price: 1600000000
+views: 0
+decription: 'Cuốn hút, sang trọng, đỉnh đạc.'
+originally: Japanese
+categories: Sedan
+brand: Lexus
+
+name: Mercedes CLA 2017
+image: 'images/cars/mercedes-cla.jpg'
+price: 1200000000
+views: 0
+decription: 'Trẻ trung, đầy màu sắc.'
+originally: USA
+categories: Sedan
+brand: Mercedes-Benz
+
+name: Mercedes E63 2017
+image: 'images/cars/mercedes-e63.jpg'
+price: 4200000000
+views: 0
+decription: 'Mạnh mẽ, thần tốc, cuốn hút, năng động.'
+originally: USA
+categories: Sedan
+brand: Mercedes-Benz
+
+name: BMW 750Ld 2017
+image: 'images/cars/bmw-750ld.jpg'
+price: 500000000
+views: 0
+decription: 'Mạnh mẽ, thần tốc, tự tin chinh phục.'
+originally: USA
+categories: Sedan
+brand: BMW
+
+name: Audi A6 2017
+image: 'images/cars/audi-a6.jpg'
+price: 2000000000
+views: 0
+decription: 'Thiết kế thời thượng, sang trọng, lịch lãm.'
+originally: USA
+categories: Sedan
+brand: Audi
+
+name: Audi S8 2017
+image: 'images/cars/audi-S8.jpg'
+price: 5000000000
+views: 0
+decription: 'Thiết kế với màu sắc huyền bí, thu hút, sang trọng.'
+originally: USA
+categories: Sedan
+brand: Audi
+
+name: Ford S-MAX 2017
+image: 'images/cars/ford-smax.jpg'
+price: 2000000000
+views: 0
+decription: 'Thiết kế thời thượng, sang trọng, lịch lãm.'
+originally: USA
+categories: MPV
+brand: Ford
+
+name: Ford C-MAX 2017
+image: 'images/cars/ford-c-max.jpg'
+price: 1000000000
+views: 0
+decription: 'Thiết kế trẻ trung năng động, đa dụng.'
+originally: USA
+categories: MPV
+brand: Ford
+
+name: Toyota Prius+ 2017
+image: 'images/cars/toyota-prius.jpg'
+price: 1100000000
+views: 0
+decription: 'Lịch lãm trong thiết kế, êm ái trong vận hành.'
+originally: Japanese
+categories: MPV
+brand: Toyota
+
+name: Toyota Verso 2017
+image: 'images/cars/toyota-verso.jpg'
+price: 1100000000
+views: 0
+decription: 'Thiết kế sang trọng, giá cả phải chăng.'
+originally: Japanese
+categories: MPV
+brand: Toyota
+
+name: Toyota Urban 2017
+image: 'images/cars/toyota-urban.jpg'
+price: 800000000
+views: 0
+decription: 'Mạnh mẽ, cứng cáp, chinh phục mọi nẻo đường.'
+originally: Japanese
+categories: MPV
+brand: Toyota
+
+name: Honda FR-V
+image: 'images/cars/honda-frv.jpg'
+price: 1000000000
+views: 0
+decription: 'Kích thước vừa phải, đa dụng..'
+originally: Japanese
+categories: MPV
+brand: Honda
+
+name: Ford Fusion 2017
+image: 'images/cars/ford-fusion.jpg'
+price: 800000000
+views: 0
+decription: 'Thiết kế trẻ trung năng động, đa dụng.'
+originally: USA
+categories: MPV
+brand: Ford
+
+name: Ford EcoSport 2017
+image: 'images/cars/ford-eco.jpg'
+price: 1100000000
+views: 0
+decription: 'Thiết kế trẻ trung tươi mới độc đáo.'
+originally: USA
+categories: SUV
+brand: Ford
+
+name: Ford Cougar 2017
+image: 'images/cars/ford-cougar.jpg'
+price: 1100000000
+views: 0
+decription: 'Thiết kế cổ điển, hoài cổ, sang trọng.'
+originally: USA
+categories: SUV
+brand: Ford
