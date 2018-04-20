@@ -4,8 +4,8 @@
 
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-	};	
-		
+	};
+
 /*scroll to top*/
 
 $(document).ready(function(){
@@ -27,4 +27,19 @@ $(document).ready(function(){
 	        zIndex: 2147483647 // Z-Index for the overlay
 		});
 	});
+});
+
+$(document).ready(function(){
+  $("#lastest-items").siblings().hide();
+});
+
+$(document).ready(function() {
+  $("#label-litems, #label-bs-items, #label-mv-items").click(function() {
+    var currentTarget = event.currentTarget;
+    $(currentTarget).children().attr("class", "active");
+    $(currentTarget).siblings().children().attr("class", "");
+    var id_content = $(currentTarget).children().attr("value");
+    $(id_content).siblings().hide();
+    $(id_content).show();
+  });
 });
