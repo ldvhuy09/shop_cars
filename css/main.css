@@ -151,6 +151,7 @@ a#scrollUp i{
 
 .header-middle .container .row .col-sm-8 {
 	padding-right:0;
+  padding-top: 10px;
 }
 
 .usa {
@@ -467,7 +468,7 @@ ul.sub-menu {
 }
 
 .footer-widget {
-  margin-bottom: 68px;
+  margin-bottom: 20px;
 }
 
 .footer-widget .container {
@@ -840,9 +841,9 @@ h2.title {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  margin: 0 15px;
+  margin: 0;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -1041,6 +1042,9 @@ h2.title {
   margin-right:0;
 }
 
+.show-item {
+  margin-top: 40px;
+}
 .recommended_items {
   overflow: hidden;
 }
@@ -2536,4 +2540,18 @@ h2.title {
 
 .contact-info .social-networks ul li a:hover{
   color: #FE980F;
+}
+
+/*******************************
+*******INTRO MEMBER CSS ********
+********************************/
+
+#intro-member {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 40px auto;
+}
+#intro-member img {
+  width: 100%;
+  height: auto;
 }
