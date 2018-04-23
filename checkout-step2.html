@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | The Car Shop</title>
+ <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+  	<link href="css/main.css" rel="stylesheet">
+  	<link href="css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/logo2.png" alt="" style="width:30%" /></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="account.html"><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="login.html" class="active"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+            <div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Trang chủ</a></li>
+								<li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
+                  <ul role="menu" class="sub-menu">
+                    <li><a href="shop.html">Tất cả</a></li>
+                    <li role="separator" class="divider"></li>
+										<li class="dropdown-submenu">
+                      <a href="#">Theo loại</a>
+                    </li>
+                    <li role="separator" class="divider"></li>
+										<li><a href="#">Theo sản phẩm</a></li>
+                  </ul>
+                </li>
+								<li><a href="contact-us.html">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+          <div class="col-sm-5">
+						<div class="input-group">
+							<div class="input-group-btn search-panel">
+                <button id="dropdown-search-panel" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span id="search-concept">Bộ lọc </span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-search-panel" role="menu">
+                  <li><a href="#">Tên</a></li>
+                  <li><a href="#">Nhãn hiệu</a></li>
+                  <li><a href="#">Tính năng</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Tất cả</a></li>
+                </ul>
+              </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control" name="x" placeholder="Tìm kiếm">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+
+
+<section id="checkout-step-contain">
+            <div class="container">
+                <div class="account-content checkout-staps">
+                     <div class="account-content checkout-staps">
+                        <div class="staps">
+                            <div class="row">
+                                    <div class="col-md-3 col-sm-10 col-xs-12">
+                                        <div class="checkout-stap active">
+                                            <div class="title"> <span class="stap">1 </span><a href="checkout-step1.html">Thông tin</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="checkout-stap">
+                                            <div class="title"><span class="stap">2 </span><a href="checkout-step2.html">Giao hàng</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="checkout-stap ">
+                                            <div class="title"><span class="stap">3 </span><a href="checkout-step3.html">Thanh toán</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="checkout-stap">
+                                            <div class="title"><span class="stap">4 </span><a href="checkout-step4.html">Đặt hàng</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>       
+                     </div>           
+                     <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="delivery-method tf"> Chọn phương thức giao hàng</h2>
+                    </div>             	
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="row">
+                            <div class="form-group col-lg-4 col-sm-4 col-md-4 -col-xs-12">
+                                <label for="id_country">Quốc gia</label>
+                                <select name="id_country" id="id_country" aria-required="true" required="" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                <option value="">Chọn</option>
+                                <option value="38">Algeria</option>
+                                <option value="39">American Samoa</option>
+                                <option value="40">Andorra</option>
+                                <option value="41">Angola</option>
+                                <option value="42">Anguilla</option>
+                                <option value="43">Antigua and Barbuda</option>
+                                <option value="44">Argentina</option>
+                                <option value="45">Armenia</option>
+                                <option value="46">Aruba</option>
+                                <option value="24">Australia</option>
+                                <option value="2">Austria</option>
+                                <option value="47">Azerbaijan</option>
+                                <option value="48">Bahamas</option>
+                                <option value="49">Bahrain</option>
+                                <option value="50">Bangladesh</option>
+                                <option value="3">Belgium</option>
+                                <option value="34">Bolivia</option>
+                                <option value="4">Canada</option>
+                                <option value="5">China</option>
+                                <option value="16">Czech Republic</option>
+                                <option value="20">Denmark</option>
+                                <option value="7">Finland</option>
+                                <option value="8">France</option>
+                                <option value="1">Germany</option>
+                                <option value="9">Greece</option>
+                                <option value="22">HongKong</option>
+                                <option value="26">Ireland</option>
+                                <option value="29">Israel</option>
+                                <option value="10">Italy</option>
+                                <option value="32">Ivory Coast</option>
+                                <option value="11">Japan</option>
+                                <option value="12">Luxemburg</option>
+                                <option value="35">Mauritius</option>
+                                <option value="13">Netherlands</option>
+                                <option value="27">New Zealand</option>
+                                <option value="31">Nigeria</option>
+                                <option value="23">Norway</option>
+                                <option value="14">Poland</option>
+                                <option value="15">Portugal</option>
+                                <option value="36">Romania</option>
+                                <option value="25">Singapore</option>
+                                <option value="37">Slovakia</option>
+                                <option value="30">South Africa</option>
+                                <option value="28">South Korea</option>
+                                <option value="6">Spain</option>
+                                <option value="18">Sweden</option>
+                                <option value="19">Switzerland</option>
+                                <option value="33">Togo</option>
+                                <option value="17">United Kingdom</option>
+                                <option value="21" selected="selected">United States</option>
+                                </select>
+                                <span aria-hidden="true" class="dropdown-wrapper"></span>
+                            </div>
+                            <div class="form-group  col-lg-4 col-sm-4 col-md-4 -col-xs-12" id="states">
+                                <label for="id-state">Bang</label>
+                                <select name="id-state" id="id-state" aria-required="true" required="" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                <option value="">Chọn</option>
+                                <option value="1">Alabama</option>
+                                <option value="2">Alaska</option>
+                                <option value="3">Arizona</option>
+                                <option value="4">Arkansas</option>
+                                <option value="5">California</option>
+                                <option value="6">Colorado</option>
+                                <option value="7">Connecticut</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Florida</option>
+                                <option value="10">Georgia</option>
+                                <option value="11">Hawaii</option>
+                                <option value="12">Idaho</option>
+                                <option value="13">Illinois</option>
+                                <option value="14">Indiana</option>
+                                <option value="15">Iowa</option>
+                                <option value="16">Kansas</option>
+                                <option value="17">Kentucky</option>
+                                <option value="18">Louisiana</option>
+                                <option value="19">Maine</option>
+                                <option value="20">Maryland</option>
+                                <option value="21">Massachusetts</option>
+                                <option value="22">Michigan</option>
+                                <option value="23">Minnesota</option>
+                                <option value="24">Mississippi</option>
+                                <option value="25">Missouri</option>
+                                <option value="26">Montana</option>
+                                <option value="27">Nebraska</option>
+                                <option value="28">Nevada</option>
+                                <option value="29">New Hampshire</option>
+                                <option value="30">New Jersey</option>
+                                <option value="31">New Mexico</option>
+                                <option value="32">New York</option>
+                                <option value="33">North Carolina</option>
+                                <option value="34">North Dakota</option>
+                                <option value="35">Ohio</option>
+                                <option value="36">Oklahoma</option>
+                                <option value="37">Oregon</option>
+                                <option value="38">Pennsylvania</option>
+                                <option value="39">Rhode Island</option>
+                                <option value="40">South Carolina</option>
+                                <option value="41">South Dakota</option>
+                                <option value="42">Tennessee</option>
+                                <option value="43">Texas</option>
+                                <option value="44">Utah</option>
+                                <option value="45">Vermont</option>
+                                <option value="46">Virginia</option>
+                                <option value="47">Washington</option>
+                                <option value="48">West Virginia</option>
+                                <option value="49">Wisconsin</option>
+                                <option value="50">Wyoming</option>
+                                <option value="51">Puerto Rico</option>
+                                <option value="52">US Virgin Islands</option>
+                                <option value="53">District of Columbia</option>
+                                </select>
+                                <span aria-hidden="true" class="dropdown-wrapper"></span>
+                            </div>
+                            <div class="form-group  col-lg-4 col-sm-4 col-md-4 -col-xs-12">
+                                <label for="zipcode">Zip Code</label>
+                                <input type="text" class="form-control" name="zipcode" id="zipcode">
+                           </div>
+                            <div class="form-group col-lg-12 col-sm-12 col-md-12 -col-xs-12">
+                                <table class="table-bordered table">
+                                    <tbody>
+                                    <tr>
+                                        <td>Phương tiện</td>
+                                        <td>Hình thức</td>
+                                        <td>Thông tin</td>
+                                        <td>Giá vận chuyển</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                            <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+                                            <i class="fa  fa-plane fa-2x"></i>
+                                            </label>
+                                        </div>                                               
+                                        </td>
+                                        <td> Hàng không</td>
+                                        <td>Xe được vận chuyển từ nhà máy</td><td>5,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                            <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
+                                            <i class="fa fa-truck fa-2x"></i>
+                                            </label>
+                                        </div>                                               
+                                        </td>
+                                        <td> Đường bộ</td>
+                                        <td>Xe được vận chuyển từ cửa hàng</td><td>Miễn phí</td>
+                                    </tr>
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>             	
+                        <div class="cart-bottom">
+                            <div class="box-footer">
+                            <div class="pull-left"><a href="checkout-step1.html" class="btn btn-default"> <i class="fa fa-arrow-left"></i> Thông tin </a></div>
+                            <div class="pull-right"><a class="btn btn-primary btn-small " href="checkout-step3.html"> Thanh toán <i class="fa fa-arrow-circle-right"></i> </a></div>
+                        </div>
+                        </div>
+                   </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+  <footer id="footer"><!--Footer-->
+      <div class="footer-widget">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="single-widget">
+              <h2>Hỗ trợ</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Trợ giúp online</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="single-widget">
+              <h2>Về CarShop</h2>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="intro.html">Giới thiệu</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="single-widget">
+              <h2>Theo dõi CarShop</h2>
+              <form action="#" class="searchform">
+                <input type="text" placeholder="Địa chỉ email" />
+                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                <p>Đăng ký email để nhận <br />thông tin mới nhất về các sản phẩm...</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <p class="pull-left">Copyright © 2018 CAR SHOP Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+
+  </footer><!--/Footer-->
+
+
+
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
