@@ -54,7 +54,7 @@ $(document).ready(function(e) {
   })
 });
 
-$(document).ready(function(e){
+$(document).ready(function (e) {
   $('.shop-menu .dropdown-menu').find('a').click(function(e) {
     e.preventDefault();
     var para = $(this).attr("href").replace("#", "");

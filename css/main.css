@@ -220,6 +220,39 @@ a#scrollUp i{
 	color:#fe980f;
 	background:#fff;
 }
+.account-menu {
+  display: table;
+  margin: 10px auto;
+}
+.account-menu ul li {
+  display: inline;
+  padding: auto;
+}
+
+.account-menu ul {
+  padding: 0;
+} 
+
+.account-menu ul li a {
+  background: #FFFFFF;
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding:0;
+  margin-top: 10px;
+}
+
+
+.account-menu ul li{
+  margin: 5px 10px;
+}
+
+
+.account-menu ul li a:hover {
+	color:#fe980f;
+	background:#fff;
+}
 
 
 .header-bottom {
@@ -1922,17 +1955,40 @@ h2.title {
 
 
 .shopper-info > form > input,
-.form-two > form > select,
-.form-two > form > input,
-.form-one > form > input {
+.form-two > form > div > select,
+.form-two > form > div > input,
+.form-one > form > div > input {
+  float:right;
   background:#F0F0E9;
   border: 0 none;
-  margin-bottom:10px;
   padding: 10px;
-  width: 100%;
+  width: 70%;
   font-weight: 300
 }
-
+.form-one > form > div > div {
+  float: right;
+  width: 70%;
+}
+.form-one > form > div > div > div {
+  float: left;
+  border: 0 none;
+  padding: 10px;
+  width: 50%;
+}
+.form-one > form > div > div > div > label {
+  font-size: 15px;
+  font-weight: 300;
+}
+.form-one > form > div,
+.form-two > form > div {
+  margin-bottom: 10px;
+}
+.form-one > form > div > label,
+.form-two > form > div > label {
+  font-size: 15px;
+  font-weight: 100;
+  padding: 10px;
+}
 .form-two > form > select {
   padding:10px 5px
 }
@@ -1941,6 +1997,12 @@ h2.title {
   margin-left: 5%
 }
 
+#btn-saveInformation {
+  padding: 10px 5px;
+  display: table;
+  margin: 20px auto;
+  width: 47%;
+}
 
 .order-message textarea {
   font-size: 12px;
@@ -1978,26 +2040,26 @@ h2.title {
   margin-right: 30px;
 }
 
-#cart_items .cart_info
+#history-transaction .cart_info
 .table.table-condensed.total-result {
   margin-bottom: 10px;
   margin-top: 35px;
   color: #696763
 }
 
-#cart_items .cart_info
+#history-transaction .cart_info
 .table.table-condensed.total-result tr {
   border-bottom: 0
 }
 
-#cart_items .cart_info
+#history-transaction .cart_info
 .table.table-condensed.total-result span {
   color: #FE980F;
   font-weight: 700;
   font-size: 16px
 }
 
-#cart_items .cart_info
+#history-transaction .cart_info
 .table.table-condensed.total-result
 .shipping-cost {
   border-bottom: 1px solid #F7F7F0;

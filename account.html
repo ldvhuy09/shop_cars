@@ -6,11 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | The Car Shop</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,500italic,100italic,100' rel='stylesheet' type='text/css'>
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -18,7 +13,6 @@
     <link href="css/animate.css" rel="stylesheet">
   	<link href="css/main.css" rel="stylesheet">
   	<link href="css/responsive.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
 </head><!--/head-->
 
 <body>
@@ -60,10 +54,10 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="account.html"><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="account.html" class='active'><i class="fa fa-user"></i> Tài khoản</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+								<li><a href="login.html" class="active"><i class="fa fa-lock"></i> Đăng nhập</a></li>
 							</ul>
 						</div>
 					</div>
@@ -83,7 +77,7 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="mainmenu pull-left">
+            <div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.html" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
@@ -126,249 +120,137 @@
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 
-	<section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
 
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>Sang trọng</span> Lịch lãm</h1>
-									<h2>Tôn vinh GIÁ TRỊ của bạn</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/cars/cover/lc.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>Mạnh mẽ</span> Vững vàng</h1>
-									<h2>Tự tin chinh phục mọi thử thách</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/cars/cover/ranger.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>Nhỏ gọn</span> Tinh tế</h1>
-									<h2>Luôn đồng hành cùng bạn</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/cars/cover/kia_morning.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-
-						</div>
-
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section><!--/slider-->
-
-  <section id="form"><!--form-->
+  <section><!--account-menu-->
     <div class="container">
-
-
-
-	<div class="col-md-9">
-              <div class="checkout-page">
-                <ol class="checkout-steps">              
-                  </li>
-                  <li class="steps active">
-                    <a href="checkout.html" class="step-title">
-                     Thông tin tài khoản
-                    </a>
-                    <div class="step-description">
-                      <form>
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6">
-                            <div class="your-details">
-                              <h5>
-                                Thông tin cá nhân
-                              </h5>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Tên 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Họ và tên đệm
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Email 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Số điện thoại
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Fax 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Công ty 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="pass-wrap">
-                                <div class="form-row">
-                                  <label class="lebel-abs">
-                                    Mật khẩu mới
-                                    <strong class="red">
-                                      *
-                                    </strong>
-                                  </label>
-                                  <input type="password" class="input namefild" name="">
-                                </div>
-                                <div class="form-row">
-                                  <label class="lebel-abs">
-                                    Xác nhận lại mật khẩu 
-                                    <strong class="red">
-                                      *
-                                    </strong>
-                                  </label>
-                                  <input type="password" class="input cpass" name="">
-                                </div>
-                              </div>
-                              <p>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-md-6 col-sm-6">
-                            <div class="your-details">
-                              <h5>
-                                Thông tin nhận hàng
-                              </h5>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Địa chỉ 01
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Địa chỉ 02
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Thành phố 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Postal Code 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <div class="form-row">
-                                <label class="lebel-abs">
-                                  Quốc gia 
-                                  <strong class="red">
-                                    *
-                                  </strong>
-                                
-                                </label>
-                                <input type="text" class="input namefild" name="">
-                              </div>
-                              <p class="privacy">
-                                <span class="input-radio">
-                                  <input type="radio" name="user">
-                                </span>
-                                <span class="text">
-                                  I have read and agree to the 
-                                  <a href="#" class="red">
-                                    Privacy Policy
-                                  </a>
-                                </span>
-                              </p>
-                              <button>
-                                Continue
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-
+      <div class='row'>
+        <h2 class='title text-center'>Tài khoản</h2>
+      </div>
+      <div class='row'>
+        <div class='account-menu'>
+          <ul>
+            <li><a id=''>Cập nhật thông tin</a></li>
+            <li>|</li>
+            <li><a id=''>Lịch sử mua hàng</a></li>
+          </ul>
         </div>
+      </div>
+      <div id='acc-update-infor' class="row">
+        <div class="clearfix">
+          <div class="form-one">
+            <form>
+              <div class='form-group'>
+                <label for="inputLasttName">Họ và tên đệm * </label>
+                <input id="inputFirstName" type="text" placeholder="Nguyễn Văn">
+              </div>
+              <div class='form-group'>
+                <label for="inputFirstName">Tên</label>
+                <input id='inputFirstName' type="text" placeholder="A">
+              </div>
+              <div class='form-group'>
+                <label for="checkGender">Giới tính</label>
+                <div id='checkGender'>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio1">Nam </label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">Nữ</label>
+                  </div>
+                </div>
+                  
+              </div>
+              <div class='form-group'>
+                <label for="inputBirthday">Ngày sinh</label>
+                <input id='inputBirthday' type="text" placeholder="Ngày sinh">
+              </div>
+              <div class='form-group'>
+                <label for="inputPhone">Số điện thoại *</label>
+                <input id='inputPhone' type="text" placeholder="Số điện thoại"> 
+              </div>
+            </form>
+          </div>
+          <div class="form-two">
+            <form>
+              <div class='form-group'>
+                  <label for="inputEmail">Email</label>
+                  <input id='inputEmail' type="text" placeholder="Email*">
+              </div>
+              <div class='form-group'>
+                <label for="inputAddress1">Địa chỉ 1</label>
+                <input id='inputAddress1' type="text" placeholder="Địa chỉ 1">
+              </div>
+              <div class='form-group'>
+                  <label for="inputAddress2">Địa chỉ 2</label>
+                  <input id='inputAddress2' type="text" placeholder="Địa chỉ 2">
+              </div>
+              <div class="form-group">
+                <label for="selectCountry">Quốc gia</label>
+                <select>
+                  <option>-- Quốc gia --</option>
+                  <option>Singapore</option>
+                  <option>Thái Lan</option>
+                  <option>United States</option>
+                  <option>Việt Nam</option>
+                </select>                    
+              </div>
+              <div class='form-group'>
+                <label for="selectProvince">Tỉnh/Thành</label>
+                <select>
+                  <option>-- Tỉnh/thành --</option>
+                  <option>Đà Nẵng</option>
+                  <option>Hà Nội</option>
+                  <option>Hồ Chí Minh</option>
+                  <option>Quảng Nam</option>
+                </select> 
+              </div>
+            </form>
+          </div>
+          <button id='btn-saveInformation' type="submit" class='btn btn-primary'>Lưu thay đổi</button>
+        </div>  
+      </div>
+      <div id='history-transaction' class='row'>
+          <div class="table-responsive">
+            <table class="table">
+              <caption>List of users</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ID Giao dịch</th>
+                  <th scope="col">Ngày giao dịch</th>
+                  <th scope="col">Sản phẩm</th>
+                  <th scope="col">Tổng tiền</th>
+                  <th scope="col">Trạng thái giao dịch</th>
 
-  </section><!--/form-->
 
-   
-				</div>
-			</div>
-		</div>
-	</section>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </section><!--account-menu-->
 
   <footer id="footer"><!--Footer-->
       <div class="footer-widget">
@@ -418,9 +300,9 @@
 
 
     <script src="js/jquery.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
-  	<script src="js/jquery.scrollUp.min.js"></script>
-  	<script src="js/price-range.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
 </body>
