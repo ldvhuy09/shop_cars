@@ -1,6 +1,3 @@
-'data.txt'
-
-
 name: Audi Q5 2.0 2017
 image: 'images/cars/audi-q5.jpg'
 price: 1820000000

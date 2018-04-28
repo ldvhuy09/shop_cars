@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Car Shop - Dashboard</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/nprogress.css" rel="stylesheet">
+  <link href="css/green.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-progressbar-3.3.4.min.css">
+  <link rel="stylesheet" href="css/pnotify.css">
+  <link rel="stylesheet" href="css/pnotify.buttons.css">
+  <link rel="stylesheet" href="css/pnotify.nonblock.css">
+  <link href="css/custom.min.css" rel="stylesheet">
+
+</head>
+
+<body class='nav-md'>
+    <div class='container body'>
+        <div class='main_container'>
+            <!-- sidebar menu  -->
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>CarShop</span></a>
+                    </div>
+        
+                    <div class="clearfix"></div>
+        
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="images/member/Huy_avatar.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>Việt Huy</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+        
+                    <br />
+        
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Dashboard</h3>
+                            <ul class="nav side-menu">
+                                <li><a href='admin.html'><i class="fa fa-home"></i> Home </a></li>
+                                <li><a href='manage-trans.html'><i class="fa fa-table"></i> Quản lý đơn hàng </a></li>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Quản lý sản phẩm <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="manage-total-product.html">Theo sản phẩm</a></li>
+                                        <li><a href="manage-catelogies.html">Theo loại</a></li>
+                                        <li><a href="manage-brand.html">Theo nhà sản xuất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>        
+                    </div>
+                    <!-- /sidebar menu -->
+        
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- /sidebar menu  -->
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+        
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="images/img.jpg" alt="">Việt Huy
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+        
+                        <li role="presentation" class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-green">2</span>
+                        </a>
+                        <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                            <li>
+                                <a>
+                                    <span class="image"><img src="images/member/DHT_avatar.jpg" alt="Profile Image" /></span>
+                                    <span>
+                                    <span>Nguyễn Văn A</span>
+                                    <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Bao giờ shop mới có Lamborghini vậy ad
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                            <a>
+                                <span class="image"><img src="images/member/Huy_avatar.png" alt="Profile Image" /></span>
+                                <span>
+                                <span>Nguyễn Văn B</span>
+                                <span class="time">3 mins ago</span>
+                                </span>
+                                <span class="message">
+                                    Shop nhập vài chiếc Ferrari về được không?
+                                </span>
+                            </a>
+                            </li>
+                            <li>
+                            <div class="text-center">
+                                <a>
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class='right_col' role='main'>
+                <!-- top tiles -->
+                <div class="row tile_count">
+                    <div class="col-md-4 tile_stats_count">
+                        <span class="count_top"><i class="fa fa-user"></i> Tổng sản phẩm</span>
+                        <div class="count">40</div>
+                    </div>
+                    <div class="col-md-4 tile_stats_count">
+                        <span class="count_top"><i class="fa fa-clock-o"></i> Tổng số loại</span>
+                        <div class="count">5</div>
+                    </div>
+                    
+                    <div class="col-md-4 tile_stats_count">
+                        <span class="count_top"><i class="fa fa-user"></i> Tổng nhà sản xuất</span>
+                        <div class="count">7</div>
+                    </div>
+                </div>
+                <!-- /top tiles -->
+
+                <div class='row'>
+                  <div class="col-md-12">
+                    <div class="x_panel">
+                      <div class="x_title">
+                        <h2><i class="fa fa-align-left"></i>Sản phẩm theo loại</h2>
+
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="x_content">
+    
+                        <!-- start accordion -->
+                        <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h4 class="panel-title">SUV</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Tên sản phẩm</th>
+                                      <th>Giá</th>
+                                      <th>Số lượng</th>
+                                      <th>Mô tả</th>
+                                      <th>Nguồn gốc</th>
+                                      <th>Thương hiện</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Audi Q5 2.0 2017</td>
+                                      <td>1820000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế tinh tế, sang trọng, khẳng định đẳng cấp của bạn'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Audi Q2 1.0 2017</td>
+                                      <td>8300000000</td>
+                                      <td>1</td>
+                                      <td>'Vẻ đẹp đến từ từng chi tiết. Màu sắc hài hòa, trẻ trung, năng động'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Audi S1 2.0 2015</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Nhỏ gọn, tinh tế, động cơ chạy êm, khả năng tăng tốc cao'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota RAV4 2017</td>
+                                      <td>1100000000</td>
+                                      <td>1</td>
+                                      <td>'Mạnh mẽ, lôi cuốn, có khả năng vận tải cao'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Edge 2016</td>
+                                      <td>1700000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, thiết kế sang trọng, màu sắc thanh nhã, lịch lãm.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Kuga 2017</td>
+                                      <td>1700000000</td>
+                                      <td>1</td>
+                                      <td>'Màu sắc tươi mới, chất lượng tuyệt hảo.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Honda HR 2015</td>
+                                      <td>800000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, màu sắc thanh nhã, lịch lãm.'</td>
+                                      <td>Japanese</td>
+                                      <td>Honda</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Honda CR 2015</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Rắn chắc, mượt mà, tinh tế'</td>
+                                      <td>Japanese</td>
+                                      <td>Honda</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Mercedes G350 2016</td>
+                                      <td>5000000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, thiết kế cứng cáp, sẵn sàng chinh phục thử thách.'</td>
+                                      <td>USA</td>
+                                      <td>Mercedes-Benz</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Mercedes GLC350 2017</td>
+                                      <td>1500000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, thiết kế cứng cáp, sẵn sàng vượt mọi chặng đường.'</td>
+                                      <td>USA</td>
+                                      <td>Mercedes-Benz</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Mercedes GLE400 2017</td>
+                                      <td>3000000000</td>
+                                      <td>1</td>
+                                      <td>'Đẳng cấp phái mạnh, sẵn sàng vượt mọi chặng đường.'</td>
+                                      <td>USA</td>
+                                      <td>Mercedes-Benz</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford EcoSport 2017</td>
+                                      <td>1100000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế trẻ trung tươi mới độc đáo.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Cougar 2017</td>
+                                      <td>1100000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế cổ điển, hoài cổ, sang trọng.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    Coupe
+                                    <tr>
+                                      <td>Audi R8 2016</td>
+                                      <td>6500000000</td>
+                                      <td>1</td>
+                                      <td>'Sang trọng, lịch lãm, quyến rủ trên từng centimet'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>BMW 640i 2015</td>
+                                      <td>3200000000</td>
+                                      <td>1</td>
+                                      <td>'Thời trang, tinh tế, quyến rũ, thiết kế năng động, trẻ trung.'</td>
+                                      <td>USA</td>
+                                      <td>BMW</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota GT86 2016</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế sang trọng, màu sắc hài hòa, tươi mới.'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Lexus RC 2016</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Tinh tế, thanh nhã, quyến rũ.'</td>
+                                      <td>Japanese</td>
+                                      <td>Lexus</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Audi R8 Spyder 2016</td>
+                                      <td>6500000000</td>
+                                      <td>1</td>
+                                      <td>'Hội tụ tinh hoa, sang trọng, lịch lãm, quyến rũ.'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Mustang 2015</td>
+                                      <td>1500000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, thiết kế sang trọng.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h4 class="panel-title">Convertible</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Tên sản phẩm</th>
+                                      <th>Giá</th>
+                                      <th>Số lượng</th>
+                                      <th>Mô tả</th>
+                                      <th>Nguồn gốc</th>
+                                      <th>Thương hiện</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>BMW 420i 2017</td>
+                                      <td>1600000000</td>
+                                      <td>1</td>
+                                      <td>'Thời trang, tinh tế, quyến rũ, thiết kế năng động, trẻ trung.'</td>
+                                      <td>USA</td>
+                                      <td>BMW</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Audi A3 2017</td>
+                                      <td>1600000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế năng động, trẻ trung, động cơ mạnh mẽ, san bằng mọi địa hình.'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Mercedes AMG 2017</td>
+                                      <td>4000000000</td>
+                                      <td>1</td>
+                                      <td>'Sang trọng, tinh tế, màu sắc tươi mới, nổi bật.'</td>
+                                      <td>USA</td>
+                                      <td>Mercedes-Benz</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h4 class="panel-title">Sedan</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Tên sản phẩm</th>
+                                      <th>Giá</th>
+                                      <th>Số lượng</th>
+                                      <th>Mô tả</th>
+                                      <th>Nguồn gốc</th>
+                                      <th>Thương hiện</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td>BMW 530e 2017</td>
+                                        <td>1200000000</td>
+                                        <td>1</td>
+                                        <td>'Đẳng cấp thời thượng.'</td>
+                                        <td>USA</td>
+                                        <td>BMW</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Lexus IS 2017</td>
+                                        <td>1200000000</td>
+                                        <td>1</td>
+                                        <td>'Tinh tế, thanh nhã, quyến rũ.'</td>
+                                        <td>Japanese</td>
+                                        <td>Lexus</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Audi S3 2017</td>
+                                        <td>2000000000</td>
+                                        <td>1</td>
+                                        <td>'Năng động trẻ trung, tự tin chinh phục thử thách.'</td>
+                                        <td>USA</td>
+                                        <td>Audi</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Lexus GS 2017</td>
+                                        <td>1600000000</td>
+                                        <td>1</td>
+                                        <td>'Cuốn hút, sang trọng, đỉnh đạc.'</td>
+                                        <td>Japanese</td>
+                                        <td>Lexus</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mercedes CLA 2017</td>
+                                        <td>1200000000</td>
+                                        <td>1</td>
+                                        <td>'Trẻ trung, đầy màu sắc.'</td>
+                                        <td>USA</td>
+                                        <td>Mercedes-Benz</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mercedes E63 2017</td>
+                                        <td>4200000000</td>
+                                        <td>1</td>
+                                        <td>'Mạnh mẽ, thần tốc, cuốn hút, năng động.'</td>
+                                        <td>USA</td>
+                                        <td>Mercedes-Benz</td>
+                                      </tr>
+                                      <tr>
+                                        <td>BMW 750Ld 2017</td>
+                                        <td>500000000</td>
+                                        <td>1</td>
+                                        <td>'Mạnh mẽ, thần tốc, tự tin chinh phục.'</td>
+                                        <td>USA</td>
+                                        <td>BMW</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Audi A6 2017</td>
+                                        <td>2000000000</td>
+                                        <td>1</td>
+                                        <td>'Thiết kế thời thượng, sang trọng, lịch lãm.'</td>
+                                        <td>USA</td>
+                                        <td>Audi</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Audi S8 2017</td>
+                                        <td>5000000000</td>
+                                        <td>1</td>
+                                        <td>'Thiết kế với màu sắc huyền bí, thu hút, sang trọng.'</td>
+                                        <td>USA</td>
+                                        <td>Audi</td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h4 class="panel-title">Coupe</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Tên sản phẩm</th>
+                                      <th>Giá</th>
+                                      <th>Số lượng</th>
+                                      <th>Mô tả</th>
+                                      <th>Nguồn gốc</th>
+                                      <th>Thương hiện</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Audi R8 2016</td>
+                                      <td>6500000000</td>
+                                      <td>1</td>
+                                      <td>'Sang trọng, lịch lãm, quyến rủ trên từng centimet'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>BMW 640i 2015</td>
+                                      <td>3200000000</td>
+                                      <td>1</td>
+                                      <td>'Thời trang, tinh tế, quyến rũ, thiết kế năng động, trẻ trung.'</td>
+                                      <td>USA</td>
+                                      <td>BMW</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota GT86 2016</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế sang trọng, màu sắc hài hòa, tươi mới.'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Lexus RC 2016</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Tinh tế, thanh nhã, quyến rũ.'</td>
+                                      <td>Japanese</td>
+                                      <td>Lexus</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Audi R8 Spyder 2016</td>
+                                      <td>6500000000</td>
+                                      <td>1</td>
+                                      <td>'Hội tụ tinh hoa, sang trọng, lịch lãm, quyến rũ.'</td>
+                                      <td>USA</td>
+                                      <td>Audi</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Mustang 2015</td>
+                                      <td>1500000000</td>
+                                      <td>1</td>
+                                      <td>'Động cơ mạnh mẽ, thiết kế sang trọng.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel">
+                            <a class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h4 class="panel-title">MPV</h4>
+                            </a>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Tên sản phẩm</th>
+                                      <th>Giá</th>
+                                      <th>Số lượng</th>
+                                      <th>Mô tả</th>
+                                      <th>Nguồn gốc</th>
+                                      <th>Thương hiện</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Ford Galaxy 1.5 2015</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Khả năng chuyên chở tốt, chinh phục mọi mặt địa hình.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>BMW 216D 2017</td>
+                                      <td>1200000000</td>
+                                      <td>1</td>
+                                      <td>'Khả năng chuyên chở tốt, chinh phục mọi mặt địa hình.'</td>
+                                      <td>USA</td>
+                                      <td>BMW</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford S-MAX 2017</td>
+                                      <td>2000000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế thời thượng, sang trọng, lịch lãm.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford C-MAX 2017</td>
+                                      <td>1000000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế trẻ trung năng động, đa dụng.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota Prius+ 2017</td>
+                                      <td>1100000000</td>
+                                      <td>1</td>
+                                      <td>'Lịch lãm trong thiết kế, êm ái trong vận hành.'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota Verso 2017</td>
+                                      <td>1100000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế sang trọng, giá cả phải chăng.'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Toyota Urban 2017</td>
+                                      <td>800000000</td>
+                                      <td>1</td>
+                                      <td>'Mạnh mẽ, cứng cáp, chinh phục mọi nẻo đường.'</td>
+                                      <td>Japanese</td>
+                                      <td>Toyota</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Honda FR-V</td>
+                                      <td>1000000000</td>
+                                      <td>1</td>
+                                      <td>'Kích thước vừa phải, đa dụng..'</td>
+                                      <td>Japanese</td>
+                                      <td>Honda</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Ford Fusion 2017</td>
+                                      <td>800000000</td>
+                                      <td>1</td>
+                                      <td>'Thiết kế trẻ trung năng động, đa dụng.'</td>
+                                      <td>USA</td>
+                                      <td>Ford</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end of accordion -->
+                        
+                      </div>
+                    </div>
+                  </div>        
+                </div>
+
+            </div>
+            <!-- page content -->
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="js/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="js/bootstrap-progressbar.min.js"></script>
+    <script src="js/pnotify.js"></script>
+    <script src="js/pnotify.buttons.js"></script>
+    <script src="js/pnotify.nonblock.js"></script>
+    <script src="js/icheck.min.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="js/custom.min.js"></script>
+	<script src="js/custom.js"></script>		
+</body>
+</html>
