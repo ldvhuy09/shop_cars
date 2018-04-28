@@ -44,6 +44,21 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function () {
+  $("#acc-update-infor").siblings().hide();
+});
+
+$(document).ready(function() {
+  $("#label-acc-update, #label-acc-his-trans").click(function() {
+    var currentTarget = event.currentTarget;
+    $(currentTarget).attr("class", "active");
+    $(currentTarget).siblings().attr("class", "");
+    var id_content = $(currentTarget).attr("value");
+    $(id_content).siblings().hide();
+    $(id_content).show();
+  });
+});
+
 $(document).ready(function(e) {
   $('.search-panel .dropdown-menu').find('a').click(function(e) {
     e.preventDefault();

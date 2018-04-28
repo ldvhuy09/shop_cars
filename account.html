@@ -129,126 +129,132 @@
       <div class='row'>
         <div class='account-menu'>
           <ul>
-            <li><a id=''>Cập nhật thông tin</a></li>
+            <li><a id='label-acc-update' class='active' value='#acc-update-infor'>Cập nhật thông tin</a></li>
             <li>|</li>
-            <li><a id=''>Lịch sử mua hàng</a></li>
+            <li><a id='label-acc-his-trans' value='#history-transactions'>Lịch sử mua hàng</a></li>
           </ul>
         </div>
       </div>
-      <div id='acc-update-infor' class="row">
-        <div class="clearfix">
-          <div class="form-one">
-            <form>
-              <div class='form-group'>
-                <label for="inputLasttName">Họ và tên đệm * </label>
-                <input id="inputFirstName" type="text" placeholder="Nguyễn Văn">
-              </div>
-              <div class='form-group'>
-                <label for="inputFirstName">Tên</label>
-                <input id='inputFirstName' type="text" placeholder="A">
-              </div>
-              <div class='form-group'>
-                <label for="checkGender">Giới tính</label>
-                <div id='checkGender'>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio1">Nam </label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio2">Nữ</label>
-                  </div>
+      <div class='content'>
+        <div id='acc-update-infor' class="row">
+          <div class="clearfix">
+            <div class="form-one">
+              <form>
+                <div class='form-group'>
+                  <label for="inputLasttName">Họ và tên đệm * </label>
+                  <input id="inputFirstName" type="text" placeholder="Nguyễn Văn">
                 </div>
-                  
-              </div>
-              <div class='form-group'>
-                <label for="inputBirthday">Ngày sinh</label>
-                <input id='inputBirthday' type="text" placeholder="Ngày sinh">
-              </div>
-              <div class='form-group'>
-                <label for="inputPhone">Số điện thoại *</label>
-                <input id='inputPhone' type="text" placeholder="Số điện thoại"> 
-              </div>
-            </form>
-          </div>
-          <div class="form-two">
-            <form>
-              <div class='form-group'>
-                  <label for="inputEmail">Email</label>
-                  <input id='inputEmail' type="text" placeholder="Email*">
-              </div>
-              <div class='form-group'>
-                <label for="inputAddress1">Địa chỉ 1</label>
-                <input id='inputAddress1' type="text" placeholder="Địa chỉ 1">
-              </div>
-              <div class='form-group'>
-                  <label for="inputAddress2">Địa chỉ 2</label>
-                  <input id='inputAddress2' type="text" placeholder="Địa chỉ 2">
-              </div>
-              <div class="form-group">
-                <label for="selectCountry">Quốc gia</label>
-                <select>
-                  <option>-- Quốc gia --</option>
-                  <option>Singapore</option>
-                  <option>Thái Lan</option>
-                  <option>United States</option>
-                  <option>Việt Nam</option>
-                </select>                    
-              </div>
-              <div class='form-group'>
-                <label for="selectProvince">Tỉnh/Thành</label>
-                <select>
-                  <option>-- Tỉnh/thành --</option>
-                  <option>Đà Nẵng</option>
-                  <option>Hà Nội</option>
-                  <option>Hồ Chí Minh</option>
-                  <option>Quảng Nam</option>
-                </select> 
-              </div>
-            </form>
-          </div>
-          <button id='btn-saveInformation' type="submit" class='btn btn-primary'>Lưu thay đổi</button>
-        </div>  
+                <div class='form-group'>
+                  <label for="inputFirstName">Tên</label>
+                  <input id='inputFirstName' type="text" placeholder="A">
+                </div>
+                <div class='form-group'>
+                  <label for="checkGender">Giới tính</label>
+                  <div id='checkGender'>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio1">Nam </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio2">Nữ</label>
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class='form-group'>
+                  <label for="inputBirthday">Ngày sinh</label>
+                  <input id='inputBirthday' type="text" placeholder="Ngày sinh">
+                </div>
+                <div class='form-group'>
+                  <label for="inputPhone">Số điện thoại *</label>
+                  <input id='inputPhone' type="text" placeholder="Số điện thoại"> 
+                </div>
+              </form>
+            </div>
+            <div class="form-two">
+              <form>
+                <div class='form-group'>
+                    <label for="inputEmail">Email</label>
+                    <input id='inputEmail' type="text" placeholder="Email*">
+                </div>
+                <div class='form-group'>
+                  <label for="inputAddress1">Địa chỉ 1</label>
+                  <input id='inputAddress1' type="text" placeholder="Địa chỉ 1">
+                </div>
+                <div class='form-group'>
+                    <label for="inputAddress2">Địa chỉ 2</label>
+                    <input id='inputAddress2' type="text" placeholder="Địa chỉ 2">
+                </div>
+                <div class="form-group">
+                  <label for="selectCountry">Quốc gia</label>
+                  <select>
+                    <option>-- Quốc gia --</option>
+                    <option>Singapore</option>
+                    <option>Thái Lan</option>
+                    <option>United States</option>
+                    <option>Việt Nam</option>
+                  </select>                    
+                </div>
+                <div class='form-group'>
+                  <label for="selectProvince">Tỉnh/Thành</label>
+                  <select>
+                    <option>-- Tỉnh/thành --</option>
+                    <option>Đà Nẵng</option>
+                    <option>Hà Nội</option>
+                    <option>Hồ Chí Minh</option>
+                    <option>Quảng Nam</option>
+                  </select> 
+                </div>
+              </form>
+            </div>
+            <button id='btn-saveInformation' type="submit" class='btn btn-primary'>Lưu thay đổi</button>
+          </div>  
+        </div>
+        <div id='history-transactions' class='row'>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID Giao dịch</th>
+                    <th scope="col">Ngày giao dịch</th>
+                    <th scope="col">Sản phẩm</th>
+                    <th scope="col">Tổng tiền</th>
+                    <th scope="col">Trạng thái giao dịch</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>123456</td>
+                    <td>1/1/2018</td>
+                    <td>Audi Q5 2.0 2017</td>
+                    <td>1,800,000,000 đ</td>
+                    <td>Đã giao hàng thành công</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>123987</td>
+                    <td>30/4/2018</td>
+                    <td>Audi Q2 1.0 2017</td>
+                    <td>830,000,000 đ</td>
+                    <td>Đã giao hàng thành công</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>145672</td>
+                    <td>30/4/2018</td>
+                    <td>Audi S1 2.0 2015</td>
+                    <td>1,200,000,000 đ</td>
+                    <td>Đã giao hàng thành công</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
       </div>
-      <div id='history-transaction' class='row'>
-          <div class="table-responsive">
-            <table class="table">
-              <caption>List of users</caption>
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">ID Giao dịch</th>
-                  <th scope="col">Ngày giao dịch</th>
-                  <th scope="col">Sản phẩm</th>
-                  <th scope="col">Tổng tiền</th>
-                  <th scope="col">Trạng thái giao dịch</th>
-
-
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-      </div>
+      
     </div>
   </section><!--account-menu-->
 

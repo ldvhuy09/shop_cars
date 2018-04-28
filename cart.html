@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | The Car Shop</title>
-    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600,300,700' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -58,9 +54,9 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="account.html"><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="account.html" ><i class="fa fa-user"></i> Tài khoản</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart" class='active'></i> Giỏ hàng</a></li>
 								<li><a href="login.html" class="active"><i class="fa fa-lock"></i> Đăng nhập</a></li>
 							</ul>
 						</div>
@@ -125,112 +121,123 @@
 	</header><!--/header-->
 
 
-    <!-- bredcrumb and page title block end  -->
-    
-    <section id="cart-page-contain">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 col-xs-12"> 
-                    <!-- left block Start  -->
-                    <div class="cart-content table-responsive">
-                        <table class="cart-table table-responsive" style="width:100%">
-                            <tbody>
-                                <tr class="Cartproduct carttableheader">
-                                    <td style="width:10%">Product</td>
-                                    <td style="width:25%"> Details</td>
-                                    <td style="width:10%">QNT</td>
-                                    <td style="width:10%">Discount</td>
-                                    <td style="width:15%">Total</td>
-                                    <td class="delete" style="width:10%">&nbsp;</td>
+    <section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Shopping Cart</li>
+				</ol>
+            </div>
+            <div class='row'>
+                <div class='col-md-8 col-sm-12'>
+                    <div class="table-responsive cart_info">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr class="cart_menu">
+                                    <td class="image">Mặt hàng</td>
+                                    <td class="description"></td>
+                                    <td class="price">Giá</td>
+                                    <td class="quantity">Số lượng</td>
+                                    <td></td>
                                 </tr>
-                                <tr class="Cartproduct">
-                                    <td ><div class="image"><a href="product-details.html"><img alt="img" src="images/cars/audi-a3.jpg"></a></div></td>
-                                    <td><div class="product-name">
-                                            <h4><a href="product-details.html"> Audi A3 </a></h4>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="cart_product">
+                                        <a href=""><img src="images/cars/toyota-rav4.jpg" alt=""></a>
+                                    </td>
+                                    <td class="cart_description">
+                                        <h4><a href="">Toyota RAV4 2017</a></h4>
+                                        <p>ID: 1089772</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <p>1,100,000,000 đ</p>
+                                    </td>
+                                    <td class="cart_quantity">
+                                        <div class="cart_quantity_button">
+                                            <a class="cart_quantity_up" href=""> + </a>
+                                            <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                            <a class="cart_quantity_down" href=""> - </a>
                                         </div>
-                                        <span class="size"> 2017 </span>
-                                        <div class="price"><span> 1,600,000,000 </span></div></td>
-                                    <td class="product-quantity"><div class="quantity">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="cart" min="0" step="1">
-                                        </div></td>
-                                    <td>0</td>
-                                    <td class="price"> 1,600,000,000 </td>
-                                    <td class="delete"><a title="Delete"> <i class="glyphicon glyphicon-trash "></i></a></td>
-                                </tr>	
-                                
-                                <tr class="Cartproduct">
-                                    <td ><div class="image"><a href="product-details.html"><img alt="img" src="images/cars/audi-s3.jpg"></a></div></td>
-                                    <td><div class="product-name">
-                                            <h4><a href="product-details.html"> Audi S3 </a></h4>
+                                    </td>
+                                    <td class="cart_delete">
+                                        <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                    </td>
+                                </tr>
+        
+                                <tr>
+                                    <td class="cart_product">
+                                        <a href=""><img src="images/cars/audi-r8.jpg" alt=""></a>
+                                    </td>
+                                    <td class="cart_description">
+                                        <h4><a href="">Audi R8 2016/a></h4>
+                                        <p>ID: 1089772</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <p>6,500,000,000</p>
+                                    </td>
+                                    <td class="cart_quantity">
+                                        <div class="cart_quantity_button">
+                                            <a class="cart_quantity_up" href=""> + </a>
+                                            <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                            <a class="cart_quantity_down" href=""> - </a>
                                         </div>
-                                        <span class="size">Audi S3 2017</span>
-                                        <div class="price"><span> 2,000,000,000 </span></div></td>
-                                    <td class="product-quantity"><div class="quantity">
-                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="cart" min="0" step="1">
-                                        </div></td>
-                                    <td>0</td>
-                                    <td class="price"> 2,000,000,000 </td>
-                                    <td class="delete"><a title="Delete"> <i class="glyphicon glyphicon-trash"></i></a></td>
+                                    </td>
+                                    <td class="cart_delete">
+                                        <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cart_product">
+                                        <a href=""><img src="images/cars/ford-galaxy.jpg" alt=""></a>
+                                    </td>
+                                    <td class="cart_description">
+                                        <h4><a href="">Ford Galaxy 1.5 2015</a></h4>
+                                        <p>ID: 1089772</p>
+                                    </td>
+                                    <td class="cart_price">
+                                        <p>1,200,000,000</p>
+                                    </td>
+                                    <td class="cart_quantity">
+                                        <div class="cart_quantity_button">
+                                            <a class="cart_quantity_up" href=""> + </a>
+                                            <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                            <a class="cart_quantity_down" href=""> - </a>
+                                        </div>
+                                    </td>
+                                    <td class="cart_delete">
+                                        <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="cart-bottom">
-                        <div class="box-footer">
-                            <div class="pull-left"><a class="btn btn-default" href="index.html"> <i class="fa fa-arrow-left"></i> &nbsp; Continue shopping </a></div>
-                            <div class="pull-right">
-                                <button class="btn btn-default" type="submit"><i class="fa fa-undo"></i> &nbsp; Update cart</button>
+                </div>
+                <div class="col-md-4 col-sm-12">
+					<div class="total_area">
+                        <div class='row'>
+                            <ul>
+                                <li>Tạm tính <span>8,800,000,000 đ</span></li>
+                                <li>Phí vận chuyển <span>0 đ</span></li>
+                                <li>Giảm giá <span>0 đ</span></li>
+                                <li>Tổng cộng (đã có VAT) <span>8,800,000,000 đ</span></li>
+                            </ul>
+                        </div>
+						<div class='row'>
+                            <div class='col-md-6 col-sm-12'>
+                                <a class="btn btn-default update" href="">Cập nhật</a>
+                            </div>
+                            <div class='col-md-6 col-sm-12'>
+                                <a class="btn btn-default check_out" href="checkout-step1.html">Thanh toán</a>
                             </div>
                         </div>
-                    </div>
-                    <!-- left block end  --> 
-                </div>
-                <div class="col-md-3 col-xs-12"> 
-                    <!-- right block Start  -->
-                    <section id="right">
-                        <div class="sidebar-block">
-                            <div class="sidebar-widget">
-                                <div class="sidebar-title">
-                                    <h4>Cart Summary</h4>
-                                </div>
-                                <div id="order-detail-content" class="title-toggle table-block">
-                                    <div class="carttable">
-                                        <table class="table" id="cart-summary">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Total products</td>
-                                                    <td class="price">3,600,000,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shipping</td>
-                                                    <td class="price"><span class="success">Free shipping!</span></td>
-                                                </tr>
-                                                <tr class="cart-total-price ">
-                                                    <td>Total (tax excl.)</td>
-                                                    <td class="price">3,600,000,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Total tax</td>
-                                                    <td id="total-tax" class="price">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td> Total</td>
-                                                    <td id="total-price">3,600,000,000</td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="checkout"> <a href="checkout.html" title="checkout" class="btn btn-default ">Proceed to checkout</a> </div>
-                        </div>
-                    </section>
-                    <!-- left block end  --> 
-                </div>
+					</div>
+				</div>
             </div>
-        </div>
-    </section>
+			
+		</div>
+	</section> <!--/#cart_items-->
 
   <footer id="footer"><!--Footer-->
       <div class="footer-widget">
@@ -277,7 +284,7 @@
 
   </footer><!--/Footer-->
 
-		
+
 
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>

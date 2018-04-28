@@ -1623,13 +1623,13 @@ h2.title {
 #cart_items .cart_info .cart_menu {
   background: #FE980F;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
 }
 
 #cart_items .cart_info .table.table-condensed thead tr {
-  height: 51px;
+  height: 40px;
 }
 
 
@@ -1659,7 +1659,7 @@ h2.title {
 #cart_items .cart_info .cart_description h4 a {
   color: #363432;
   font-family: 'Roboto',sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
 
 }
@@ -1671,7 +1671,7 @@ h2.title {
 
 #cart_items .cart_info .cart_price p {
   color:#696763;
-  font-size: 18px
+  font-size: 15px
 }
 
 
@@ -1683,6 +1683,11 @@ h2.title {
 .cart_product {
   display: block;
   margin: 15px -70px 10px 25px;
+}
+
+.cart_product img {
+  width: 80px;
+  height: auto;
 }
 
 .cart_quantity_button a {
@@ -1761,14 +1766,25 @@ h2.title {
   float: right;
 }
 
-.total_area ul li {
-  background:#E6E4DF;
-  color: #696763;
-  margin-top: 10px;
-  padding: 7px 20px;
+.total_area ul {
+  padding-left: 5px;
+  padding-right:5px;
 }
 
 
+.total_area ul li {
+  background:#E6E4DF;
+  color: #696763;
+  /* margin-top: 0px; */
+  margin-bottom: 10px;
+  padding: 7px 20px;
+}
+
+.total_area a {
+  float: right;
+  width: 100%;
+  margin: 5px auto;
+}
 .user_option label {
   color: #696763;
   font-weight: normal;
