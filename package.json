@@ -4,7 +4,8 @@
   "description": "eCommerce Site for automotive sales",
   "main": "app.js",
   "scripts": {
-    "test": "start app.js"
+    "test": "exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ldvhuy09/shop_cars/issues"
   },
-  "homepage": "https://github.com/ldvhuy09/shop_cars#readme"
+  "homepage": "https://github.com/ldvhuy09/shop_cars#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-handlebars-sections": "^1.0.1"
+  }
 }
