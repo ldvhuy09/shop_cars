@@ -1,0 +1,19 @@
+{
+  "name": "1512197_1312528",
+  "version": "1.0.0",
+  "description": "eCommerce Site for automotive sales",
+  "main": "app.js",
+  "scripts": {
+    "test": "start app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldvhuy09/shop_cars.git"
+  },
+  "author": "1512197_1312528",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldvhuy09/shop_cars/issues"
+  },
+  "homepage": "https://github.com/ldvhuy09/shop_cars#readme"
+}
