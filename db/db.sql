@@ -16,6 +16,18 @@ create table _USER (
   primary key (_userID)
 );
 
+drop table if exists _TYPE_CAR;
+create table _TYPE_CAR (
+	_type char(20),
+    primary key (_type)
+);
+
+drop table if exists _BRAND_CAR;
+create table _BRAND_CAR (
+	_brand char(20),
+    primary key (_brand)
+);
+
 drop table if exists _PRODUCT;
 create table _PRODUCT (
 	_productID smallint(5) not null auto_increment,
@@ -27,7 +39,9 @@ create table _PRODUCT (
 	_price decimal(11, 0),
     _link varchar(100),
 
-	primary key (_productID)
+	primary key (_productID),
+    foreign key (_brand) references _BRAND_CAR(_brand),
+    foreign key (_type) references _TYPE_CAR(_type)
 );
 
 drop table if exists _SHIPPING_TYPE;

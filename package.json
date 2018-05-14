@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "express-handlebars-sections": "^1.0.1"
+    "express-handlebars-sections": "^1.0.1",
+    "mysql": "^2.15.0"
   }
 }
