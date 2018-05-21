@@ -1,0 +1,32 @@
+
+<div class="left-sidebar">
+  <h2>Loại xe</h2>
+  <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+    {{#each catelogies.type}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="#">{{_type}}</a></h4>
+      </div>
+    </div>
+    {{/each}}
+  </div><!--/category-products-->
+
+  <div class="brands_products"><!--brands_products-->
+    <h2>Thương hiệu</h2>
+    <div class="brands-name">
+      <ul class="nav nav-pills nav-stacked">
+        {{#each catelogies.brand}}
+        <li><a href="#">{{_brand}}</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div><!--/brands_products-->
+
+  <div class="price-range"><!--price-range-->
+    <h2>Khoảng giá</h2>
+    <div class="well text-center">
+        <input type="text" class="span2" value="" data-slider-min="0.5" data-slider-max="10" data-slider-step="0.5" data-slider-value="[1,5]" id="sl2" ><br />
+        <b class="pull-left">0,5 tỷ</b> <b class="pull-right">10 tỷ</b>
+    </div>
+  </div><!--/price-range-->
+</div>

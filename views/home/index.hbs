@@ -1,743 +1,695 @@
-{{#section 'slider'}}
-  <section id="slider"><!--slider-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="1"></li>
-							<li data-target="#slider-carousel" data-slide-to="2"></li>
-						</ol>
-
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>Sang trọng</span> Lịch lãm</h1>
-									<h2>Tôn vinh GIÁ TRỊ của bạn</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="/images/cars/cover/lc.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>Mạnh mẽ</span> Vững vàng</h1>
-									<h2>Tự tin chinh phục mọi thử thách</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="/images/cars/cover/ranger.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>Nhỏ gọn</span> Tinh tế</h1>
-									<h2>Luôn đồng hành cùng bạn</h2>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="/images/cars/cover/kia_morning.png" class="girl img-responsive" alt="" />
-								</div>
-							</div>
-
-						</div>
-
-						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section><!--/slider-->
-{{/section}}
-
-
-
-  <div class="col-sm-9">
-    <div class="shop-menu ">
-        <h2 class="title text-center">Sản phẩm</h2>
-        <div class="col-sm-8">
-          <ul class="nav navbar-nav shop-menu">
-            <li id="label-litems"><a class="active" value="#lastest-items">Mới nhất</a></li>
-            <li id="label-bs-items"><a value="#best-seller-items">Bán chạy nhất</a></li>
-            <li id="label-mv-items"><a value="#most-visited-items">Xem nhiều nhất</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <div class="input-group">
-            <div class="input-group-btn">
-              <button id="dropdown-order-panel" type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span id="dropdown-order-by">Thứ tự </span><span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu pull-right" aria-labelledby="dropdown-order-panel" role="menu">
-                <li><a href="#">A-Z</a></li>
-                <li><a href="#">Z-A</a></li>
+{{> slider}}
+<section>
+  <div class="container">
+    <div class="row">
+      {{!-- <div class="col-sm-3">
+        {{>catelogies}}
+      </div> --}}
+      <div class="col-sm-12">
+        <div class="shop-menu ">
+            <h2 class="title text-center">Sản phẩm</h2>
+            <div class="col-sm-8">
+              <ul class="nav navbar-nav shop-menu">
+                <li id="label-litems"><a class="active" value="#lastest-items">Mới nhất</a></li>
+                <li id="label-bs-items"><a value="#best-seller-items">Bán chạy nhất</a></li>
+                <li id="label-mv-items"><a value="#most-visited-items">Xem nhiều nhất</a></li>
               </ul>
             </div>
-              <input type="hidden" name="order_param" value="all" id="order_param">
-          </div>
-        </div>
-    </div><br>
-    <div class="show-item">
-      <div id="lastest-items"><!--features_items-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                  <div class="productinfo text-center">
-                    <img src="/images/cars/audi-q5.jpg" alt="" />
-                    <h2>1,820,000,000 đ</h2>
-                    <p>Audi Q5 2.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <button id="dropdown-order-panel" type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span id="dropdown-order-by">Thứ tự </span><span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu pull-right" aria-labelledby="dropdown-order-panel" role="menu">
+                    <li><a href="#">A-Z</a></li>
+                    <li><a href="#">Z-A</a></li>
+                  </ul>
+                </div>
+                  <input type="hidden" name="order_param" value="all" id="order_param">
+              </div>
+            </div>
+        </div><br>
+        <div class="show-item">
+          <div id="lastest-items"><!--features_items-->
+            {{> showProduct}}
+            {{!-- <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                      <div class="productinfo text-center">
+                        <img src="/images/cars/audi-q5.jpg" alt="" />
+                        <h2>1,820,000,000 đ</h2>
+                        <p>Audi Q5 2.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                      </div>
+                      <div class="product-overlay">
+                        <div class="overlay-content">
+                          <h2>1,820,000,000 đ</h2>
+                          <p>Audi Q5 2.0 2017</p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                        </div>
+                      </div>
                   </div>
-                  <div class="product-overlay">
-                    <div class="overlay-content">
-                      <h2>1,820,000,000 đ</h2>
-                      <p>Audi Q5 2.0 2017</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-q2.jpg" alt="" />
+                      <h2>830,000,000 đ</h2>
+                      <p>Audi Q2 1.0 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>830,000,000 đ</h2>
+                        <p>Audi Q2 1.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
                     </div>
                   </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-q2.jpg" alt="" />
-                  <h2>830,000,000 đ</h2>
-                  <p>Audi Q2 1.0 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>830,000,000 đ</h2>
-                    <p>Audi Q2 1.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- end row-->
+            <!-- end row-->
 
-        <!--row 2-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-s1.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Audi S1 2.0 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Audi S1 2.0 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-rav4.jpg" alt="" />
-                  <h2>1,100,000,000 đ</h2>
-                  <p>Toyota RAV4 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,100,000,000 đ</h2>
-                    <p>Toyota RAV4 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!--new row 3-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/ford-galaxy.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Ford Galaxy 1.5 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Ford Galaxy 1.5 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-216d.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>BMW 216D 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>BMW 216D 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!--row 4-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-420i.jpg" alt="" />
-                  <h2>1,600,000,000 đ</h2>
-                  <p>BMW 420i 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,600,000,000 đ</h2>
-                    <p>BMW 420i 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-640i.jpg" alt="" />
-                  <h2>3,200,000,000 đ</h2>
-                  <p>BMW 640i 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>3,200,000,000 đ</h2>
-                    <p>BMW 640i 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end row -->
-
-        <!-- row 5 --->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-gt86.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Toyota GT86 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Toyota GT86 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/lexus-rc.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Lexus RC 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Lexus RC 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row -->
-      </div><!--lastest_items-->
-
-      <div id="best-seller-items"><!--best seller item-->
-        <!--row 1-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-s1.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Audi S1 2.0 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Audi S1 2.0 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-rav4.jpg" alt="" />
-                  <h2>1,100,000,000 đ</h2>
-                  <p>Toyota RAV4 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,100,000,000 đ</h2>
-                    <p>Toyota RAV4 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!-- begin row 2 -->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                  <div class="productinfo text-center">
-                    <img src="/images/cars/audi-q5.jpg" alt="" />
-                    <h2>1,820,000,000 đ</h2>
-                    <p>Audi Q5 2.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                  </div>
-                  <div class="product-overlay">
-                    <div class="overlay-content">
-                      <h2>1,820,000,000 đ</h2>
-                      <p>Audi Q5 2.0 2017</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+            <!--row 2-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-s1.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Audi S1 2.0 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Audi S1 2.0 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
                     </div>
                   </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-q2.jpg" alt="" />
-                  <h2>830,000,000 đ</h2>
-                  <p>Audi Q2 1.0 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>830,000,000 đ</h2>
-                    <p>Audi Q2 1.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- end row-->
-
-        <!--new row 3-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/ford-galaxy.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Ford Galaxy 1.5 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Ford Galaxy 1.5 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-216d.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>BMW 216D 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>BMW 216D 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!--row 4-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-420i.jpg" alt="" />
-                  <h2>1,600,000,000 đ</h2>
-                  <p>BMW 420i 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,600,000,000 đ</h2>
-                    <p>BMW 420i 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-640i.jpg" alt="" />
-                  <h2>3,200,000,000 đ</h2>
-                  <p>BMW 640i 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>3,200,000,000 đ</h2>
-                    <p>BMW 640i 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end row -->
-
-        <!-- row 5 --->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-gt86.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Toyota GT86 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Toyota GT86 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/lexus-rc.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Lexus RC 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Lexus RC 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row -->
-      </div><!--best seller item -->
-
-      <div id="most-visited-items"><!--most visited item-->
-        <!--row 4-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-420i.jpg" alt="" />
-                  <h2>1,600,000,000 đ</h2>
-                  <p>BMW 420i 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,600,000,000 đ</h2>
-                    <p>BMW 420i 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-640i.jpg" alt="" />
-                  <h2>3,200,000,000 đ</h2>
-                  <p>BMW 640i 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>3,200,000,000 đ</h2>
-                    <p>BMW 640i 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end row -->
-
-        <!--row 2-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-s1.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Audi S1 2.0 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Audi S1 2.0 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-rav4.jpg" alt="" />
-                  <h2>1,100,000,000 đ</h2>
-                  <p>Toyota RAV4 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,100,000,000 đ</h2>
-                    <p>Toyota RAV4 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!--new row 3-->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/ford-galaxy.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Ford Galaxy 1.5 2015</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Ford Galaxy 1.5 2015</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/bmw-216d.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>BMW 216D 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>BMW 216D 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end row-->
-
-        <!-- begin row 4 -->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                  <div class="productinfo text-center">
-                    <img src="/images/cars/audi-q5.jpg" alt="" />
-                    <h2>1,820,000,000 đ</h2>
-                    <p>Audi Q5 2.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                  </div>
-                  <div class="product-overlay">
-                    <div class="overlay-content">
-                      <h2>1,820,000,000 đ</h2>
-                      <p>Audi Q5 2.0 2017</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-rav4.jpg" alt="" />
+                      <h2>1,100,000,000 đ</h2>
+                      <p>Toyota RAV4 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,100,000,000 đ</h2>
+                        <p>Toyota RAV4 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/audi-q2.jpg" alt="" />
-                  <h2>830,000,000 đ</h2>
-                  <p>Audi Q2 1.0 2017</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+            <!--end row-->
+
+            <!--new row 3-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/ford-galaxy.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Ford Galaxy 1.5 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Ford Galaxy 1.5 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>830,000,000 đ</h2>
-                    <p>Audi Q2 1.0 2017</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-216d.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>BMW 216D 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>BMW 216D 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- end row-->
+            <!--end row-->
+
+            <!--row 4-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-420i.jpg" alt="" />
+                      <h2>1,600,000,000 đ</h2>
+                      <p>BMW 420i 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,600,000,000 đ</h2>
+                        <p>BMW 420i 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-640i.jpg" alt="" />
+                      <h2>3,200,000,000 đ</h2>
+                      <p>BMW 640i 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>3,200,000,000 đ</h2>
+                        <p>BMW 640i 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <!-- row 5 --->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-gt86.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Toyota GT86 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Toyota GT86 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/lexus-rc.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Lexus RC 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Lexus RC 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row --> --}}
+          </div><!--lastest_items-->
+
+          <div id="best-seller-items"><!--best seller item-->
+            <!--row 1-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-s1.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Audi S1 2.0 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Audi S1 2.0 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-rav4.jpg" alt="" />
+                      <h2>1,100,000,000 đ</h2>
+                      <p>Toyota RAV4 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,100,000,000 đ</h2>
+                        <p>Toyota RAV4 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+
+            <!-- begin row 2 -->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                      <div class="productinfo text-center">
+                        <img src="/images/cars/audi-q5.jpg" alt="" />
+                        <h2>1,820,000,000 đ</h2>
+                        <p>Audi Q5 2.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                      </div>
+                      <div class="product-overlay">
+                        <div class="overlay-content">
+                          <h2>1,820,000,000 đ</h2>
+                          <p>Audi Q5 2.0 2017</p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-q2.jpg" alt="" />
+                      <h2>830,000,000 đ</h2>
+                      <p>Audi Q2 1.0 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>830,000,000 đ</h2>
+                        <p>Audi Q2 1.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row-->
+
+            <!--new row 3-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/ford-galaxy.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Ford Galaxy 1.5 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Ford Galaxy 1.5 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-216d.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>BMW 216D 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>BMW 216D 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+
+            <!--row 4-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-420i.jpg" alt="" />
+                      <h2>1,600,000,000 đ</h2>
+                      <p>BMW 420i 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,600,000,000 đ</h2>
+                        <p>BMW 420i 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-640i.jpg" alt="" />
+                      <h2>3,200,000,000 đ</h2>
+                      <p>BMW 640i 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>3,200,000,000 đ</h2>
+                        <p>BMW 640i 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <!-- row 5 --->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-gt86.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Toyota GT86 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Toyota GT86 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/lexus-rc.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Lexus RC 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Lexus RC 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row -->
+          </div><!--best seller item -->
+
+          <div id="most-visited-items"><!--most visited item-->
+            <!--row 4-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-420i.jpg" alt="" />
+                      <h2>1,600,000,000 đ</h2>
+                      <p>BMW 420i 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,600,000,000 đ</h2>
+                        <p>BMW 420i 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-640i.jpg" alt="" />
+                      <h2>3,200,000,000 đ</h2>
+                      <p>BMW 640i 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>3,200,000,000 đ</h2>
+                        <p>BMW 640i 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+
+            <!--row 2-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-s1.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Audi S1 2.0 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Audi S1 2.0 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-rav4.jpg" alt="" />
+                      <h2>1,100,000,000 đ</h2>
+                      <p>Toyota RAV4 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,100,000,000 đ</h2>
+                        <p>Toyota RAV4 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+
+            <!--new row 3-->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/ford-galaxy.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Ford Galaxy 1.5 2015</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Ford Galaxy 1.5 2015</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/bmw-216d.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>BMW 216D 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>BMW 216D 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+
+            <!-- begin row 4 -->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                      <div class="productinfo text-center">
+                        <img src="/images/cars/audi-q5.jpg" alt="" />
+                        <h2>1,820,000,000 đ</h2>
+                        <p>Audi Q5 2.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                      </div>
+                      <div class="product-overlay">
+                        <div class="overlay-content">
+                          <h2>1,820,000,000 đ</h2>
+                          <p>Audi Q5 2.0 2017</p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/audi-q2.jpg" alt="" />
+                      <h2>830,000,000 đ</h2>
+                      <p>Audi Q2 1.0 2017</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>830,000,000 đ</h2>
+                        <p>Audi Q2 1.0 2017</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row-->
 
 
-        <!-- row 5 --->
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/toyota-gt86.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Toyota GT86 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+            <!-- row 5 --->
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/toyota-gt86.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Toyota GT86 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Toyota GT86 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Toyota GT86 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/images/cars/lexus-rc.jpg" alt="" />
+                      <h2>1,200,000,000 đ</h2>
+                      <p>Lexus RC 2016</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2>1,200,000,000 đ</h2>
+                        <p>Lexus RC 2016</p>
+                        <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <img src="/images/cars/lexus-rc.jpg" alt="" />
-                  <h2>1,200,000,000 đ</h2>
-                  <p>Lexus RC 2016</p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2>1,200,000,000 đ</h2>
-                    <p>Lexus RC 2016</p>
-                    <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <!--end row -->
+          </div><!--the most viewed item-->
         </div>
-        <!--end row -->
-      </div><!--the most viewed item-->
+      </div>
     </div>
   </div>
+</section>
+
+
+
+  

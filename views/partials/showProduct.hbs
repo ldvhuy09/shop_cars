@@ -1,0 +1,35 @@
+{{#each product}}
+    <div class="col-md-4 col-sm-4" style="float:right" >
+      <div class="single-products">
+        <div class="productinfo text-center">
+          <img src="/{{_link}}" alt="" />
+          <h2>{{_price}} VNĐ</h2>
+          <p>{{_name}}</p>
+          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+        </div>
+      </div>
+    </div>
+{{/each}}
+
+{{!-- 
+    {{#each product}}
+    <div class="col-md-4 col-sm-4" style="display:contents" >
+      <div class="product-image-wrapper">
+        <div class="single-products">
+            <div class="productinfo text-center">
+              <img src="/{{_link}}" alt="" />
+              <h2>{{_price}} VNĐ</h2>
+              <p>{{_name}}</p>
+              <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hành</a>
+            </div>
+            <div class="product-overlay">
+              <div class="overlay-content">
+                <h2>{{_price}} đ</h2>
+                <p>{{_name}}</p>
+                <a href="#" class="btn btn-default add-to-cart"><i class="fa "></i>Xem chi tiết</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    {{/each}} --}}

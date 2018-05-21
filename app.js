@@ -8,6 +8,7 @@ var app = express();
 var menuController = require('./controllers/menuController');
 
 app.engine('hbs', _hbs({
+    extname: '.hbs',
     defaultLayout: 'main',
     layoutsDir: 'views/layouts/',
     partialsDir: 'views/partials/',
