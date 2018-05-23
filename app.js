@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var app = express();
 
-var menuController = require('./controllers/menuController');
+var guestController = require('./controllers/guestController');
 
 app.engine('hbs', _hbs({
     extname: '.hbs',
@@ -25,11 +25,11 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.get('/', (req, res) => {
-    res.redirect('/detail-product');
+    res.redirect('/home');
 });
-app.use('/home', menuController);
-app.use('/product', menuController);
-app.use('/detail-product', menuController);
+app.use('/home', guestController);
+app.use('/product', guestController);
+//app.use('/detail-product', menuController);
 app.listen(8001, () => {
     console.log('Running on port 8001');
 });
