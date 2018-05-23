@@ -1,7 +1,22 @@
 var db = require('../fn/db');
 
 exports._loadAll = (_table) => {
-  var sql = `select * from ${_table}`
+  var sql = `select * from ${_table}`;
+  return db.load(sql);
+};
+
+exports._loadLimit = (_table, _att, _val, _limit) => {
+  return new Promise((resolve, reject) => {
+    var sql = `select * from ${_table} where ${_att} = \"${_val}\" limit ${_limit}`;
+    db.load(sql).then(rows => {
+      if (rows.length == 0)
+        resolve(null);
+      else
+        resolve(rows);
+    }).catch (err => {
+      reject(err);
+    });
+  });
   return db.load(sql);
 };
 

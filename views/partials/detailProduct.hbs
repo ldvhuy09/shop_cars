@@ -1,0 +1,66 @@
+{{#with product.detail}}
+  <div class="product-details"><!--product-details-->
+    <div class="col-sm-7">
+      <div class="view-product">
+        <img src="/{{_link}}" alt="" />
+        <h3>ZOOM</h3>
+      </div>
+      {{!-- <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+            <div class="item active">
+                <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+            </div>
+            <div class="item">
+              <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+              <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+            </div>
+            <div class="item">
+              <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
+              <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
+              <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <a class="left item-control" href="#similar-product" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="right item-control" href="#similar-product" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+          </a>
+      </div> --}}
+
+    </div>
+    <div class="col-sm-5">
+      <div class="product-information"><!--/product-information-->
+        <h2>{{_name}}</h2>
+        <a href="#"><span class="label label-warning">Lượt xem</span> <span class="label label-warning">{{_viewed}}</span></a>
+        <a href="#"><span class="label label-success">Đã bán</span> <span class="label label-success">42</span></a>
+        <span>
+          <span>{{_price}} đ</span>
+        </span>
+        <p><b>Loại xe:</b> {{_type}}</p>
+        <p><b>Thương hiệu:</b>{{_brand}} </p>
+        <p><b>Xuât xứ:</b> {{_origin}}</p>  
+        <span>
+          <label>Số lượng:</label>
+          <input type="text" value="3" />
+          <button type="button" class="btn btn-fefault cart">
+            <i class="fa fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </span>        
+      </div><!--/product-information-->
+    </div>
+  </div><!--/product-details-->
+
+  <div class="description_items">
+    <h2 class="title text-center">Mô tả</h2>
+    <div class="description well">
+      Là 1 chiếc SUV sang trọng nhỏ gọn, Audi Q5 2017 đem lại cho người dùng cảm giác đặc biệt với kiểu dáng đẹp mắt, cabin tinh tế cùng với động cơ mạnh mẽ nhưng lại tiết kiệm xăng. Bởi vậy, mặc dù kích thước nhỏ gọn nhưng Audi Q5 2017 luôn khiến người sử dụng cảm thấy kiêu hãnh trên mọi nẻo đường.
+    </div>
+  </div>
+{{/with}}

@@ -25,10 +25,11 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.get('/', (req, res) => {
-    res.redirect('/home');
+    res.redirect('/detail-product');
 });
 app.use('/home', menuController);
 app.use('/product', menuController);
+app.use('/detail-product', menuController);
 app.listen(8001, () => {
     console.log('Running on port 8001');
 });

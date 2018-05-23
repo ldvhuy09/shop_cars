@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ldvhuy09/shop_cars#readme",
   "dependencies": {
+    "async": "^2.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-handlebars-sections": "^1.0.1",

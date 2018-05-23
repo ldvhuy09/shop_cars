@@ -10,8 +10,12 @@ module.exports = {
       return query._loadAll(this._table);
     },
 
-    this.single =  function(_type) {
-      return query._single(this._table, this._att, _type);
+    this.loadLimit = function(_att, _val, _limit) {
+      return query._loadLimit(this._table, _att, _val, _limit);
+    }
+
+    this.single =  function(_id) {
+      return query._single(this._table, this._att_id, _id);
     },
 
     this.add =  function(_type) {
