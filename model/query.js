@@ -4,7 +4,10 @@ exports._loadAll = (_table) => {
   var sql = `select * from ${_table}`;
   return db.load(sql);
 };
-
+exports._loadBy = (_table, _att, _val) => {
+  var sql = `select * from ${_table} where ${_att} = \"${_val}\"`;
+  return db.load(sql);
+};
 exports._loadLimit = (_table, _att, _val, _limit) => {
   return new Promise((resolve, reject) => {
     var sql = `select * from ${_table} where ${_att} = \"${_val}\" limit ${_limit}`;

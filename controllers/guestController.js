@@ -52,10 +52,20 @@ router.get('/product', (req, res) => {
 router.get('/product/all', (req, res) => {
   productCar.loadAll().then (rows => {
     vm.listProduct = rows;
-    res.render('allProductPage', vm);
+    res.render('allproductPage', vm);
   });
 });
 
+router.get('/:cate/:currentCate', (req, res) => {
+  var currentCate = req.params.currentCate,
+    cate = "_brand";
+  if (req.params.cate != "by-brand") cate = "_type";
+  productCar.loadBy(cate, currentCate).then(rows => {
+    vm.listProduct = rows;
+    console.log(rows);
+    res.render('products/allproductPage', vm);
+  });
+});
 router.get('/detail-product/:_productId', (req, res) => {
   var _productId = parseInt(req.params._productId, 10);
   productCar.single(_productId).then (rows => {

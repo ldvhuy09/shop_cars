@@ -5,22 +5,32 @@
     {{#each catelogies.type}}
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title"><a href="#">{{_type}}</a></h4>
+        <h4 class="panel-title"><a href="/product/by-type/{{this._type}}">{{_type}}</a></h4>
       </div>
     </div>
     {{/each}}
   </div><!--/category-products-->
 
-  <div class="brands_products"><!--brands_products-->
+  {{!-- <div class="brands_products"><!--brands_products-->
     <h2>Thương hiệu</h2>
     <div class="brands-name">
       <ul class="nav nav-pills nav-stacked">
         {{#each catelogies.brand}}
-        <li><a href="#">{{_brand}}</a></li>
+        <li><a href="/product/by-brand/{{this._brand}}">{{_brand}}</a></li>
         {{/each}}
       </ul>
     </div>
-  </div><!--/brands_products-->
+  </div><!--/brands_products--> --}}
+  <h2>Thương hiệu</h2>
+  <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+    {{#each catelogies.brand}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title"><a href="/product/by-brand/{{this._brand}}">{{_brand}}</a></h4>
+      </div>
+    </div>
+    {{/each}}
+  </div>
 
   <div class="price-range"><!--price-range-->
     <h2>Khoảng giá</h2>
