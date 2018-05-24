@@ -1,2 +1,4 @@
 node_modules/
 tool_gen/
+db/
+html_file/

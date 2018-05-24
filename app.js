@@ -24,11 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.get('/', (req, res) => {
-    res.redirect('/home');
-});
-app.use('/home', guestController);
-app.use('/product', guestController);
+app.use('/', guestController);
 //app.use('/detail-product', menuController);
 app.listen(8001, () => {
     console.log('Running on port 8001');

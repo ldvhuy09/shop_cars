@@ -33,6 +33,9 @@ brandCar.loadAll().then(rows => {
 });
 
 router.get('/', (req, res) => {
+  res.redirect('/home');
+})
+router.get('/home', (req, res) => {
   // if (vm.listProduct != null) 
   //   res.render('/home/index', vm);
   // else {
@@ -52,11 +55,14 @@ router.get('/product', (req, res) => {
 router.get('/product/all', (req, res) => {
   productCar.loadAll().then (rows => {
     vm.listProduct = rows;
-    res.render('allproductPage', vm);
+    res.render('products/allproductPage', vm);
   });
 });
+// router.get('/contact-us', (req, res) => {
+//   res.redirect('/contact');
+// });
 
-router.get('/:cate/:currentCate', (req, res) => {
+router.get('product/detail-product/:cate/:currentCate', (req, res) => {
   var currentCate = req.params.currentCate,
     cate = "_brand";
   if (req.params.cate != "by-brand") cate = "_type";
@@ -89,6 +95,10 @@ router.get('/detail-product/:_productId', (req, res) => {
       res.render('products/detailProductPage', vm);
     });  
   });
+});
+
+router.get('/contact-us', (req, res) => {
+  res.render('contact/contact-us');
 });
 
 module.exports = router;
