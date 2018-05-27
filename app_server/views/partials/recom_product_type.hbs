@@ -4,7 +4,7 @@
   <div id="recm-same-catelogies-item" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="item active">
-        {{#each product.sameType.first}}
+        {{#each specifyProduct.sameType.first}}
         <div class="col-sm-4">
           <div class="product-image-wrapper">
             <div class="single-products">
@@ -12,7 +12,7 @@
                 <img src="/{{_link}}" alt="" />
                 <h2>{{_price}} đ</h2>
                 <p>{{_name}}</p>
-                <a href="/product/detail-product/{{this._productID}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
+                <a href="/product/detail-product/{{_productID}}/{{_brand}}/{{_type}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
               </div>
             </div>
           </div>
@@ -20,7 +20,7 @@
         {{/each}}
       </div>
       <div class="item">
-        {{#each product.sameType.second}}
+        {{#each specifyProduct.sameType.second}}
         <div class="col-sm-4">
           <div class="product-image-wrapper">
             <div class="single-products">
@@ -28,7 +28,7 @@
                 <img src="/{{_link}}" alt="" />
                 <h2>{{_price}} đ</h2>
                 <p>{{_name}}</p>
-                <a href="/product/detail-product/{{this._productID}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
+                <a href="/product/detail-product/{{_productID}}/{{_brand}}/{{_type}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết</a>
               </div>
             </div>
           </div>

@@ -10,28 +10,29 @@ module.exports = {
       return query._loadAll(this._table);
     },
 
-    this.loadBy = function(_att, _val) {
-      return query._loadBy(this._table, _att, _val);
+    this.loadBy = function(att, val) {
+
+      return query._loadBy(this._table, att, val);
     },
 
-    this.loadLimit = function(_att, _val, _limit) {
-      return query._loadLimit(this._table, _att, _val, _limit);
+    this.loadLimit = function(att, val, limit) {
+      return query._loadLimit(this._table, att, val, limit);
     },
 
-    this.single =  function(_id) {
-      return query._single(this._table, this._att_id, _id);
+    this.single =  function(id) {
+      return query._single(this._table, this._att_id, id);
     },
 
-    this.add =  function(_type) {
-      return query._add(this._table, this._att, _type);
+    this.add =  function(type) {
+      return query._add(this._table, this._att, type);
     },
 
-    this.delete =  function(_type) {
-      return query._delete(this._table, this._att_id, _type);
+    this.delete =  function(type) {
+      return query._delete(this._table, this._att_id, type);
     },
 
-    this.update =  function(_type) {
-      return query._update(this._table, this._att, _type, this._att_id, _type);
+    this.update =  function(type) {
+      return query._update(this._table, this._att, _type, this._att_id, type);
     }
 
   }

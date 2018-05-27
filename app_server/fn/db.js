@@ -21,7 +21,7 @@ exports.load = sql => {
       cn.end();
     });
   });
-}
+};
 
 exports.save = sql => {
   return new Promise((resolve, reject) => {

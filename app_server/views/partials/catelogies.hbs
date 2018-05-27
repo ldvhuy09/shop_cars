@@ -2,12 +2,14 @@
 <div class="left-sidebar">
   <h2>Loại xe</h2>
   <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-    {{#each catelogies.type}}
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title"><a href="/product/by-type/{{this._type}}">{{_type}}</a></h4>
+    {{#each menu.catelogies.type}}
+    <a href="/product/catelogies/_type/{{_type}}">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">{{_type}}</h4>
+        </div>
       </div>
-    </div>
+    </a>
     {{/each}}
   </div><!--/category-products-->
 
@@ -23,12 +25,14 @@
   </div><!--/brands_products--> --}}
   <h2>Thương hiệu</h2>
   <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-    {{#each catelogies.brand}}
+    {{#each menu.catelogies.brand}}
+    <a href="/product/catelogies/_brand/{{_brand}}">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h4 class="panel-title"><a href="/product/by-brand/{{this._brand}}">{{_brand}}</a></h4>
+        <h4 class="panel-title">{{_brand}}</h4>
       </div>
     </div>
+    </a>
     {{/each}}
   </div>
 

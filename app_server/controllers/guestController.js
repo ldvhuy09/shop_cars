@@ -1,104 +1,104 @@
-var express = require('express');
-var dbtable = require('../model/data_table').DbTable;
-var async = require('async');
+// var express = require('express');
+// var dbtable = require('../model/data_table').DbTable;
+// var async = require('async');
 
-var router = express.Router();
+// var router = express.Router();
 
-var vm = {
-  catelogies: {},
-  listProduct: null,
-  product: {
-    detail: null,
-    sameType: {
-      first: null,
-      second: null
-    },
-    sameBrand: {
-      first: null,
-      second: null
-    }
-  }
-};
+// var vm = {
+//   catelogies: {},
+//   listProduct: null,
+//   product: {
+//     detail: null,
+//     sameType: {
+//       first: null,
+//       second: null
+//     },
+//     sameBrand: {
+//       first: null,
+//       second: null
+//     }
+//   }
+// };
 
-var typeCar = new dbtable("_TYPE_CAR", "_type", "_type");
-var brandCar = new dbtable("_BRAND_CAR", "_brand", "_brand");
-var productCar = new dbtable("_PRODUCT", "_productID", "_name");
+// var typeCar = new dbtable("_TYPE_CAR", "_type", "_type");
+// var brandCar = new dbtable("_BRAND_CAR", "_brand", "_brand");
+// var productCar = new dbtable("_PRODUCT", "_productID", "_name");
 
-typeCar.loadAll().then(rows => {
-  vm.catelogies.type = rows;
-});
-
-brandCar.loadAll().then(rows => {
-  vm.catelogies.brand = rows;
-});
-
-router.get('/', (req, res) => {
-  res.redirect('/home');
-})
-router.get('/home', (req, res) => {
-  // if (vm.listProduct != null) 
-  //   res.render('/home/index', vm);
-  // else {
-  //   productCar.loadAll().then (rows => {
-  //     vm.listProduct = rows;
-  //     res.render('/home/index', vm);
-  //   });
-  // }
-  productCar.loadAll().then (rows => {
-    vm.listProduct = rows;
-    res.render('home/index', vm);
-  });
-});
-router.get('/product', (req, res) => {
-  res.redirect('/product/all');
-});
-router.get('/product/all', (req, res) => {
-  productCar.loadAll().then (rows => {
-    vm.listProduct = rows;
-    res.render('products/allproductPage', vm);
-  });
-});
-// router.get('/contact-us', (req, res) => {
-//   res.redirect('/contact');
+// typeCar.loadAll().then(rows => {
+//   vm.catelogies.type = rows;
 // });
 
-router.get('product/detail-product/:cate/:currentCate', (req, res) => {
-  var currentCate = req.params.currentCate,
-    cate = "_brand";
-  if (req.params.cate != "by-brand") cate = "_type";
-  productCar.loadBy(cate, currentCate).then(rows => {
-    vm.listProduct = rows;
-    console.log(rows);
-    res.render('products/allproductPage', vm);
-  });
-});
-router.get('/detail-product/:_productId', (req, res) => {
-  var _productId = parseInt(req.params._productId, 10);
-  productCar.single(_productId).then (rows => {
-    vm.product.detail = rows;
-    async.parallel({
-      sameType: function(callback) {
-        productCar.loadLimit("_type", rows._type, 6).then(rows => {
-          vm.product.sameType.first = rows.slice(0, 3);
-          vm.product.sameType.second = rows.slice(3, 6);
-          callback(null, rows);
-        });
-      },
-      sameBrand: function(callback) {
-        productCar.loadLimit("_brand", rows._brand, 6).then(rows => {
-          vm.product.sameBrand.first = rows.slice(0, 3);
-          vm.product.sameBrand.second = rows.slice(3, 6);
-          callback(null, rows);
-        });
-      }
-    }, function(err, result) {
-      res.render('products/detailProductPage', vm);
-    });  
-  });
-});
+// brandCar.loadAll().then(rows => {
+//   vm.catelogies.brand = rows;
+// });
 
-router.get('/contact-us', (req, res) => {
-  res.render('contact/contact-us');
-});
+// router.get('/', (req, res) => {
+//   res.redirect('/home');
+// })
+// router.get('/home', (req, res) => {
+//   // if (vm.listProduct != null) 
+//   //   res.render('/home/index', vm);
+//   // else {
+//   //   productCar.loadAll().then (rows => {
+//   //     vm.listProduct = rows;
+//   //     res.render('/home/index', vm);
+//   //   });
+//   // }
+//   productCar.loadAll().then (rows => {
+//     vm.listProduct = rows;
+//     res.render('home/index', vm);
+//   });
+// });
+// router.get('/product', (req, res) => {
+//   res.redirect('/product/all');
+// });
+// router.get('/product/all', (req, res) => {
+//   productCar.loadAll().then (rows => {
+//     vm.listProduct = rows;
+//     res.render('products/allproductPage', vm);
+//   });
+// });
+// // router.get('/contact-us', (req, res) => {
+// //   res.redirect('/contact');
+// // });
 
-module.exports = router;
+// router.get('/product/:cate/:currentCate', (req, res) => {
+//   var currentCate = req.params.currentCate,
+//     cate = "_brand";
+//   if (req.params.cate != "by-brand") cate = "_type";
+//   productCar.loadBy(cate, currentCate).then(rows => {
+//     vm.listProduct = rows;
+//     console.log(rows);
+//     res.render('products/allproductPage', vm);
+//   });
+// });
+// router.get('/product/detail-product/:_productId', (req, res) => {
+//   var _productId = parseInt(req.params._productId, 10);
+//   productCar.single(_productId).then (rows => {
+//     vm.product.detail = rows;
+//     async.parallel({
+//       sameType: function(callback) {
+//         productCar.loadLimit("_type", rows._type, 6).then(rows => {
+//           vm.product.sameType.first = rows.slice(0, 3);
+//           vm.product.sameType.second = rows.slice(3, 6);
+//           callback(null, rows);
+//         });
+//       },
+//       sameBrand: function(callback) {
+//         productCar.loadLimit("_brand", rows._brand, 6).then(rows => {
+//           vm.product.sameBrand.first = rows.slice(0, 3);
+//           vm.product.sameBrand.second = rows.slice(3, 6);
+//           callback(null, rows);
+//         });
+//       }
+//     }, function(err, result) {
+//       res.render('products/detailProductPage', vm);
+//     });  
+//   });
+// });
+
+// router.get('/contact-us', (req, res) => {
+//   res.render('contact/contact-us');
+// });
+
+// module.exports = router;
