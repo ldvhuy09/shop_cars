@@ -1,0 +1,53 @@
+<section id="form"><!--form-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class="login-form"><!--login form-->
+          <h2>Đăng nhập tài khoản</h2>
+          <form method="POST" action="/login">
+            <input type="text" placeholder="Tên tài khoản" name="username"/>
+            <input type="email" placeholder="Mật khẩu" name="password"/>
+            <span>
+              <input type="checkbox" class="checkbox">
+              Ghi nhớ
+            </span>
+            <button type="submit" class="btn btn-default">Đăng nhập</button>
+          </form>
+        </div><!--/login form-->
+      </div>
+      <div class="col-sm-1">
+        <h2 class="or">Hoặc</h2>
+      </div>
+      <div class="col-sm-4">
+        <div class="signup-form"><!--sign up form-->
+          <h2>Đăng kí tài khoản mới</h2>
+          
+          <form method="POST" action="/signup">
+            {{#if name}}
+              <p class='text-danger'>{{name}}</p>
+            {{/if}}
+            <input type="text" placeholder="Tên" name="name"/>
+            {{#if email}}
+              <p class='text-danger'>{{email}}</p>
+            {{/if}}
+            <input type="email" placeholder="Email" name="email"/>
+            {{#if username}}
+              <p class='text-danger'>{{username}}</p>
+            {{/if}}
+            <input type="text" placeholder="Tên tài khoản" name="username"/>
+            {{#if password}}
+              <p class='text-danger'>{{password}}</p>
+            {{/if}}
+            <input type="password" placeholder="Mật khẩu" name="password"/>
+            {{#if password2}}
+              <p class='text-danger'>{{password2}}</p>
+            {{/if}}
+            <input type="password" placeholder="Xác nhận mật khẩu" name="password2"/>
+            <button type="submit" class="btn btn-default">Đăng kí</button>
+          </form>
+
+        </div><!--/sign up form-->
+      </div>
+    </div>
+  </div>
+</section><!--/form-->

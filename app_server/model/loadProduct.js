@@ -27,7 +27,6 @@ exports.loadDetail = (id, type, brand) => {
       },
       sameType: function(callback) {
         productCar.loadBy("_type", type).then(rows => {
-          console.log(rows);
           callback(null, rows);
         }).catch((err) => {
           reject(err);
