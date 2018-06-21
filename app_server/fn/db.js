@@ -35,7 +35,7 @@ exports.save = sql => {
 
     cn.connect();
 
-    cn.query(sql, function(error, value) {
+    cn.query(sql, function(error, value=null) {
       if (error) 
         reject(error);
       else 

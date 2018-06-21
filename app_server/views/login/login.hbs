@@ -4,9 +4,12 @@
       <div class="col-sm-4 col-sm-offset-1">
         <div class="login-form"><!--login form-->
           <h2>Đăng nhập tài khoản</h2>
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
           <form method="POST" action="/login">
             <input type="text" placeholder="Tên tài khoản" name="username"/>
-            <input type="email" placeholder="Mật khẩu" name="password"/>
+            <input type="password" placeholder="Mật khẩu" name="password"/>
             <span>
               <input type="checkbox" class="checkbox">
               Ghi nhớ
@@ -21,7 +24,9 @@
       <div class="col-sm-4">
         <div class="signup-form"><!--sign up form-->
           <h2>Đăng kí tài khoản mới</h2>
-          
+          {{#if signup_success}}
+            <div class="alert alert-success">{{signup_success}}</div>
+          {{/if}}
           <form method="POST" action="/signup">
             {{#if name}}
               <p class='text-danger'>{{name}}</p>
@@ -45,7 +50,6 @@
             <input type="password" placeholder="Xác nhận mật khẩu" name="password2"/>
             <button type="submit" class="btn btn-default">Đăng kí</button>
           </form>
-
         </div><!--/sign up form-->
       </div>
     </div>

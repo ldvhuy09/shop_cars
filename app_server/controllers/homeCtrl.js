@@ -1,8 +1,8 @@
 
-var loadData = require('../model/loadData');
+var loadContent = require('../model/loadContentPage');
 
 exports.index = function(req, res) {
-  loadData.dataHomePage().then(result => {
+  loadContent.dataHomePage().then(result => {
     res.render('home/index', result);
   }); 
 };

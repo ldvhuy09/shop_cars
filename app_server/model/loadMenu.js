@@ -1,5 +1,6 @@
-var dbtable = require('./dataTable').DbTable;
 var async = require('async');
+var TypeCarDAO = require('./typeDAO').typeDAO;
+var BrandCarDAO = require('./brandDAO').brandDAO;
 
 var menuUser = {
   catelogies: {
@@ -12,8 +13,8 @@ var menuUser = {
 
 var menuAdmin = {};
 
-var typeCar = new dbtable("_TYPE_CAR", "_type", "_type");
-var brandCar = new dbtable("_BRAND_CAR", "_brand", "_brand");
+var dataTypeCar = new TypeCarDAO();
+var dataBrandCar = new BrandCarDAO();
 
 exports.loadMenuUser = () => {
   return new Promise((resolve, reject) => {
@@ -21,33 +22,16 @@ exports.loadMenuUser = () => {
       catelogies: {},
       shopCart: {}      
     };
-    typeCar.loadAll().then(rows=> {
+    dataTypeCar.getAll().then(rows=> {
       menu.catelogies.type = rows;
     }).catch((error)=> {
       reject(error);
     });
-    brandCar.loadAll().then (rows => {
+    dataBrandCar.getAll().then (rows => {
       menu.catelogies.brand = rows;
     }).catch((error) => {
       reject(error);
     });
     resolve(menu);
   });
-  // async.parallel({
-  //   catelogies: {
-  //     type: function(callback) {
-  //       typeCar.loadAll().then (rows => {
-  //         callback(null, rows);
-  //       });
-  //     },
-  //     brand: function(callback) {
-  //       brandCar.loadAll().then(rows => {
-  //         callback(null, rows);
-  //       });
-  //     }
-  //   },
-  // }, (err, result) => {
-  //   console.log(result);
-  //   return result;
-  // });
 };

@@ -2,7 +2,7 @@
     <div class="col-md-4 col-sm-4">
       <div class="single-products">
         <div class="productinfo text-center">
-          <img src="/{{_link}}" alt="" />
+          <a href="/product/detail-product/{{this._productID}}/{{this._brand}}/{{this._type}}"><img src="/{{_link}}" alt="" /></a>
           <h2>{{_price}} VNĐ</h2>
           <p>{{_name}}</p>
           <div class="row">
@@ -14,7 +14,7 @@
     </div>
 {{/each}}
 
-{{!-- 
+{{!--
     {{#each product}}
     <div class="col-md-4 col-sm-4" style="display:contents" >
       <div class="product-image-wrapper">
