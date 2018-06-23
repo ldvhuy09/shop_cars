@@ -1,10 +1,11 @@
 var loadMenu = require('./loadMenu');
 var loadProduct = require('./loadProduct');
 var async = require('async');
+var paginate = require('express-paginate');
 
 
 
-exports.dataHomePage = () => {
+exports.dataHomePage = (limit=12, offset=0, sortBy=null, orderAZ=true) => {
   return new Promise((resolve, reject) => {
     async.parallel({
       menu: function(callback) {
@@ -13,8 +14,8 @@ exports.dataHomePage = () => {
         });
       },
       listProduct: function(callback) {
-        loadProduct.loadProduct().then(list => {
-          callback(null, list);
+        loadProduct.loadProduct(limit, offset, sortBy, orderAZ).then(res => {
+          callback(null, res);
         });
       }
     }, (err, result) => {
@@ -36,7 +37,7 @@ exports.detailProductPage = (id, type, brand) => {
         loadProduct.loadDetail(id, type, brand).then(_detail => {
           callback(null, _detail);
         });
-      }      
+      }
     }, (err, result) => {
       resolve(result);
       if (err != null) reject(err);
@@ -44,7 +45,7 @@ exports.detailProductPage = (id, type, brand) => {
   });
 };
 
-exports.productByPage = (att, val) => {
+exports.productByPage = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true) => {
   return new Promise((resolve, reject) => {
     async.parallel({
       menu: function(callback) {
@@ -53,13 +54,33 @@ exports.productByPage = (att, val) => {
         });
       },
       listProduct: function(callback) {
-        loadProduct.loadProductBy(att, val).then(rows => {
-          callback(null, rows);
+        loadProduct.loadProductBy(att, val, limit, offset, sortBy, orderAZ).then(res => {
+          callback(null, res);
         });
-      }      
+      }
     }, (err, result) => {
+      if (err !== null) reject(err);
       resolve(result);
-      if (err != null) reject(err);
+    });
+  });
+};
+
+exports.allProductPage = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
+  return new Promise((resolve, reject) => {
+    async.parallel({
+      menu: function(callback) {
+        loadMenu.loadMenuUser().then(_menu => {
+          callback(null, _menu);
+        });
+      },
+      listProduct: function(callback) {
+        loadProduct.loadProduct(limit, offset, sortBy, orderAZ).then(res => {
+          callback(null, res);
+        });
+      }
+    }, (err, result) => {
+      if (err !== null) reject(err);
+      resolve(result);
     });
   });
 }

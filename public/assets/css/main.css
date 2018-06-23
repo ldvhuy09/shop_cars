@@ -231,7 +231,7 @@ a#scrollUp i{
 
 .account-menu ul {
   padding: 0;
-} 
+}
 
 .account-menu ul li a {
   background: #FFFFFF;
@@ -1144,7 +1144,7 @@ h2.title {
 .pagination {
   display: inline-block;
   margin-bottom: 25px;
-  margin-top: 0;
+  margin-top: 20px;
   padding-left: 15px;
 }
 

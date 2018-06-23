@@ -3,18 +3,30 @@ var async = require('async');
 
 var dataProduct = new ProductDAO();
 
-exports.loadProduct = () => {
-  return dataProduct.getAll();
+/* load all product and count*/
+exports.loadProduct = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
+  return new Promise((resolve, reject) => {
+    dataProduct.getItems(limit, offset, sortBy, orderAZ).then(vm => {
+      resolve(vm);
+    }).catch(err => {
+      reject(err);
+    });
+  });
 };
 
-exports.loadProductBy = (att, val) => {
+/* load product by specify attribute*/
+exports.loadProductBy = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true) => {
   return new Promise((resolve, reject) => {
-    dataProduct.getBy(att, val).then(rows => {
-      resolve(rows);
+    dataProduct.getBy(att, val, limit, offset, sortBy, orderAZ).then(vm => {
+      resolve(vm);
+    }).catch(err => {
+      reject(err);
     });
   });
 }
 
+
+/*load detail product*/
 exports.loadDetail = (id, type, brand) => {
   return new Promise((resolve, reject) => {
     async.parallel({
@@ -26,15 +38,15 @@ exports.loadDetail = (id, type, brand) => {
         });
       },
       sameType: function(callback) {
-        dataProduct.getBy("_type", type).then(rows => {
-          callback(null, rows);
+        dataProduct.getBy("_type", type).then(res => {
+          callback(null, res.rows);
         }).catch((err) => {
           reject(err);
         });
       },
       sameBrand: function(callback) {
-        dataProduct.getBy("_brand", brand).then(rows => {
-          callback(null, rows);
+        dataProduct.getBy("_brand", brand).then(res => {
+          callback(null, res.rows);
         }).catch((err) => {
           reject(err);
         });
@@ -55,4 +67,3 @@ exports.loadDetail = (id, type, brand) => {
     });
   });
 };
-

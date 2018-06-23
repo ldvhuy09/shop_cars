@@ -8,8 +8,9 @@ router.get('/', function (req, res) {
 });
 router.get('/home', ctrHome.index);
 // router.get('/product', ctrProduct.index);
-router.get('/product/detail-product/:id/:brand/:type', ctrProduct.detailProduct);
-router.get('/product/catelogies/:att/:val', ctrProduct.productBy);
+router.get('/product/detail-product', ctrProduct.detailProduct);
+router.get('/product/catelogies', ctrProduct.productBy);
+router.get('/product/allProduct', ctrProduct.allProduct);
 router.get('/contact-us', (req, res) => {
   res.render('contact/contact-us');
 });

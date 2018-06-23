@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var dbUser = require('../model/User');
-var User = require('../model/userDAO').User;
 
 var passport = require('passport');
 var LocalStragegy = require('passport-local').Strategy;

@@ -9,9 +9,12 @@ var localLogin = require('passport-local');
 var expressValid = require('express-validator');
 var flash = require('connect-flash');
 var session = require('express-session');
+var paginate = require('express-paginate');
+var guestController = require('./app_server/controllers/guestController');
+
 var app = express();
 app.set('views', path.join(__dirname,'app_server', 'views'));
-var guestController = require('./app_server/controllers/guestController');
+
 
 app.engine('hbs', _hbs({
     extname: '.hbs',
@@ -19,7 +22,7 @@ app.engine('hbs', _hbs({
     layoutsDir: './app_server/views/layouts/',
     partialsDir: './app_server/views/partials/',
     helpers: {
-        
+
         section: express_handlebars_sections()
     }
 }));
@@ -69,8 +72,11 @@ app.use(function (req, res, next) {
     res.locals.user = req.user || null;
     next();
 });
+app.use(paginate.middleware(10, 50));
+
 app.use(require('./app_server/routes/index'));
 app.use(require('./app_server/routes/user'));
+app.use(require('./app_server/routes/viewProduct'));
 //app.use('/detail-product', menuController);
 app.listen(8001, () => {
     console.log('Running on port 8001');
