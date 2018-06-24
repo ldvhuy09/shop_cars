@@ -3,13 +3,18 @@ var bcrypt = require('bcryptjs');
 
 var dbUser = new UserDAO();
 exports.createUser = function(newUser) {
-  bcrypt.genSalt(10, function(err, salt) {
-    bcrypt.hash(newUser.pwd, salt, function(err, hash) {
-      console.log(hash);
-      newUser.pwd = hash;
-      dbUser.add(newUser);
+  return new Promise((resolve, reject) => {
+    bcrypt.genSalt(10, function(err, salt) {
+      bcrypt.hash(newUser.pwd, salt, function(err, hash) {
+        console.log(hash);
+        newUser.pwd = hash;
+        dbUser.add(newUser).then(result => {
+          resolve();
+        })
+        .catch(err => {reject(err);});
+      });
     });
-  });
+  })
 };
 
 exports.getUserByUsername = function(username) {
