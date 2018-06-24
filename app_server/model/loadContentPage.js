@@ -5,7 +5,7 @@ var paginate = require('express-paginate');
 
 
 
-exports.dataHomePage = (limit=12, offset=0, sortBy=null, orderAZ=true) => {
+exports.dataHomePage = (limit=12, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {
     async.parallel({
       menu: function(callback) {
@@ -14,7 +14,7 @@ exports.dataHomePage = (limit=12, offset=0, sortBy=null, orderAZ=true) => {
         });
       },
       listProduct: function(callback) {
-        loadProduct.loadProduct(limit, offset, sortBy, orderAZ).then(res => {
+        loadProduct.loadProduct(limit, offset, sortBy, order).then(res => {
           callback(null, res);
         });
       }
@@ -45,7 +45,7 @@ exports.detailProductPage = (id, type, brand) => {
   });
 };
 
-exports.productByPage = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true) => {
+exports.productByPage = (att, val, limit=9, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {
     async.parallel({
       menu: function(callback) {
@@ -54,7 +54,7 @@ exports.productByPage = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true)
         });
       },
       listProduct: function(callback) {
-        loadProduct.loadProductBy(att, val, limit, offset, sortBy, orderAZ).then(res => {
+        loadProduct.loadProductBy(att, val, limit, offset, sortBy, order).then(res => {
           callback(null, res);
         });
       }
@@ -65,7 +65,7 @@ exports.productByPage = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true)
   });
 };
 
-exports.allProductPage = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
+exports.allProductPage = (limit=9, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {
     async.parallel({
       menu: function(callback) {
@@ -74,7 +74,7 @@ exports.allProductPage = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
         });
       },
       listProduct: function(callback) {
-        loadProduct.loadProduct(limit, offset, sortBy, orderAZ).then(res => {
+        loadProduct.loadProduct(limit, offset, sortBy, order).then(res => {
           callback(null, res);
         });
       }

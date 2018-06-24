@@ -1,3 +1,4 @@
+//DECALRE GLOBAL VARIABLE
 var express = require('express');
 var _hbs = require('express-handlebars');
 var cookieParser = require('cookie-parser');
@@ -12,10 +13,13 @@ var session = require('express-session');
 var paginate = require('express-paginate');
 var guestController = require('./app_server/controllers/guestController');
 
+//INIT APP EXPRESS
 var app = express();
+
+//SETUP PATH TO VIEWS
 app.set('views', path.join(__dirname,'app_server', 'views'));
 
-
+//INIT TEMPLATE ENGINE 
 app.engine('hbs', _hbs({
     extname: '.hbs',
     defaultLayout: 'main',
@@ -27,6 +31,8 @@ app.engine('hbs', _hbs({
     }
 }));
 app.set('view engine', 'hbs');
+
+
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.use(bodyParser.json());
@@ -34,6 +40,19 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cookieParser());
+
+
+// Express Session
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(expressValid({
     errorFormatter: function(param, msg, value) {
         var namespace = param.split('.')
@@ -51,17 +70,6 @@ app.use(expressValid({
     }
 }));
 
-// Express Session
-app.use(session({
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: true
-}));
-
-// Passport init
-app.use(passport.initialize());
-app.use(passport.session());
-
 //  Connect flash
 app.use(flash());
 // Global Vars
@@ -72,12 +80,18 @@ app.use(function (req, res, next) {
     res.locals.user = req.user || null;
     next();
 });
+
+
+//USER EXPRESS-PAGINATE TO MAKE PAGINATION
 app.use(paginate.middleware(10, 50));
 
-app.use(require('./app_server/routes/index'));
-app.use(require('./app_server/routes/user'));
-app.use(require('./app_server/routes/viewProduct'));
-//app.use('/detail-product', menuController);
+
+//USE MIDDLEWARE
+app.use(require('./app_server/routes/homeRoute'));
+app.use(require('./app_server/routes/productRoute'));
+app.use(require('./app_server/routes/userRoute'));
+
+//LISTEN PORT 8001
 app.listen(8001, () => {
     console.log('Running on port 8001');
 });

@@ -1,12 +1,12 @@
-var ProductDAO = require('./productDAO').ProductDAO;
+var ProductDAO = require('./DAO/productDAO').ProductDAO;
 var async = require('async');
 
 var dataProduct = new ProductDAO();
 
 /* load all product and count*/
-exports.loadProduct = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
+exports.loadProduct = (limit=9, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {
-    dataProduct.getItems(limit, offset, sortBy, orderAZ).then(vm => {
+    dataProduct.getItems(limit, offset, sortBy, order).then(vm => {
       resolve(vm);
     }).catch(err => {
       reject(err);
@@ -15,10 +15,10 @@ exports.loadProduct = (limit=9, offset=0, sortBy=null, orderAZ=true) => {
 };
 
 /* load product by specify attribute*/
-exports.loadProductBy = (att, val, limit=9, offset=0, sortBy=null, orderAZ=true) => {
+exports.loadProductBy = (att, val, limit=9, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {
-    dataProduct.getBy(att, val, limit, offset, sortBy, orderAZ).then(vm => {
-      resolve(vm);
+    dataProduct.getBy(att, val, limit, offset, sortBy, order).then(result => {
+      resolve(result);
     }).catch(err => {
       reject(err);
     });
@@ -39,14 +39,14 @@ exports.loadDetail = (id, type, brand) => {
       },
       sameType: function(callback) {
         dataProduct.getBy("_type", type).then(res => {
-          callback(null, res.rows);
+          callback(null, res.items);
         }).catch((err) => {
           reject(err);
         });
       },
       sameBrand: function(callback) {
         dataProduct.getBy("_brand", brand).then(res => {
-          callback(null, res.rows);
+          callback(null, res.items);
         }).catch((err) => {
           reject(err);
         });

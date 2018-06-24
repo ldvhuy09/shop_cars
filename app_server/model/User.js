@@ -1,4 +1,4 @@
-var UserDAO = require('./userDAO').userDAO;
+var UserDAO = require('./DAO/userDAO').userDAO;
 var bcrypt = require('bcryptjs');
 
 var dbUser = new UserDAO();

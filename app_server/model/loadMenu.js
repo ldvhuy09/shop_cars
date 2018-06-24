@@ -1,6 +1,6 @@
 var async = require('async');
-var TypeCarDAO = require('./typeDAO').typeDAO;
-var BrandCarDAO = require('./brandDAO').brandDAO;
+var TypeCarDAO = require('./DAO/typeDAO').typeDAO;
+var BrandCarDAO = require('./DAO/brandDAO').brandDAO;
 
 var menuUser = {
   catelogies: {

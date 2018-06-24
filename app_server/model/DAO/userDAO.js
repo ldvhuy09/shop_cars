@@ -1,4 +1,4 @@
-var db = require('../fn/db');
+var db = require('../../fn/db');
 var interfaceDAO = require('./interfaceDAO').interfaceDAO;
 
 exports.User = function (uid, pwd, name, email) {

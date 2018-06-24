@@ -1,4 +1,4 @@
-var db = require('../fn/db');
+var db = require('../../fn/db');
 var async = require('async');
 
 exports.interfaceDAO = function () {
@@ -8,11 +8,9 @@ exports.interfaceDAO = function () {
     sql = `select * from ${this.nameTable}`;
     return db.load(sql);
   }
-  this.getItems = function(limit=9, offset=0, sortBy=null, orderAZ=true) {
+  this.getItems = function(limit=9, offset=0, sortBy=null, order='DESC') {
     if (sortBy === null) orderBy = this.col_id;
-    order = 'ASC';
-    if (!orderAZ) order = 'DESC';
-    sqlLoadItem = `select * from ${this.nameTable} limit ${limit} offset ${offset}`;
+    sqlLoadItem = `select * from ${this.nameTable} order by ${sortBy} ${order} limit ${limit} offset ${offset}`;
     sqlCount = `select count(*) as countAll from ${this.nameTable}`;
     return new Promise((resolve, reject) => {
       async.parallel({
@@ -33,10 +31,8 @@ exports.interfaceDAO = function () {
       )
     });
   };
-  this.getBy = function(col, val, limit=9, offset=0, sortBy=null, orderAZ=true) {
+  this.getBy = function(col, val, limit=9, offset=0, sortBy=null, order='DESC') {
     if (sortBy === null) orderBy = this.col_id;
-    order = 'ASC';
-    if (!orderAZ) order = 'DESC';
     sqlLoadItem = `select * from ${this.nameTable} where ${col} = \"${val}\"  order by ${sortBy} ${order} limit ${limit} offset ${offset}`;
     sqlCount = `select count(*) as countAll from ${this.nameTable} where ${col} = \"${val}\"`;
     return new Promise((resolve, reject) => {

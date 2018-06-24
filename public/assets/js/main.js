@@ -87,3 +87,19 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
+
+$(document).ready(function() {
+  var sortby, hrefOld;
+  var order = $("#order-by .active").attr('id');
+  $('#sort-by li').find('a').mouseenter(function() {
+    sortby = $(this).attr('id');
+    hrefOld = $(this).attr("href");
+    var hrefNew = hrefOld + "sortBy=" + sortby + "&order=" + orderby;
+    $(this).attr("href", hrefNew);
+    alert($(this).attr('href'));
+    $(this).mouseleave(function() {
+      $(this).attr("href", hrefOld);
+      alert($(this).attr('href'));
+    });
+  });
+});
