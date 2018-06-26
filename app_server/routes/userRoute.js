@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var userCtrl = require('../controllers/userCtrl');
+var middleware = require('../middleware/userMiddleware');
 
 var passport = require('passport');
 var LocalStragegy = require('passport-local').Strategy;
@@ -17,6 +18,11 @@ router.get('/login', userCtrl.getLoginPage);
 
 router.get('/logout', userCtrl.logout);
 
+router.get('/profile', middleware.authentication, userCtrl.getProfilePage);
+
+//process form udpate profile
+router.post('/profile/update', userCtrl.updateProfile);
+router.post('/profile/changePass', userCtrl.changePassword);
 //process form login + signup
 router.post('/signup', userCtrl.signup);
 

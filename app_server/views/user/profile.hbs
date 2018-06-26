@@ -1,0 +1,20 @@
+<section><!--account-menu-->
+  <div class="container">
+    <div class='row'>
+      <h2 class='title text-center'>Tài khoản</h2>
+    </div>
+    <div class='row'>
+      <div class='account-menu'>
+        <ul>
+          <li><a id='label-acc-update' class='active' value='#acc-update-infor'>Cập nhật thông tin</a></li>
+          <li>|</li>
+          <li><a id='label-acc-his-trans' value='#history-transactions'>Lịch sử mua hàng</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='content'>
+      {{> profileUpdate}}
+      {{!-- {{> profileHistoryTrans}} --}}
+    </div>
+  </div>
+</section><!--account-menu-->

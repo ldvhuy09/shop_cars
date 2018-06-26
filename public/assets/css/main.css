@@ -1973,9 +1973,9 @@ h2.title {
 
 
 .shopper-info > form > input,
-.form-two > form > div > select,
-.form-two > form > div > input,
-.form-one > form > div > input {
+.form-two > form  > div > select,
+.form-two > form  > div > input,
+.form-one > form  > div > input {
   float:right;
   background:#F0F0E9;
   border: 0 none;
@@ -2016,6 +2016,12 @@ h2.title {
 }
 
 #btn-saveInformation {
+  padding: 10px 5px;
+  display: table;
+  margin: 20px auto;
+  width: 47%;
+}
+#btn-savePass {
   padding: 10px 5px;
   display: table;
   margin: 20px auto;

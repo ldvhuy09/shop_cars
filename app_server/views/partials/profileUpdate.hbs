@@ -1,0 +1,87 @@
+<div id='acc-update-infor' class="row">
+  <div class="clearfix">
+    <div class="form-one">
+      {{#if update_success}}
+        <div class="alert alert-success">{{update_success}}</div>
+      {{/if}}
+      <form method="POST" action="/profile/update?uid={{user._userID}}&select=update">
+        <div class='form-group'>
+          {{#if fullname}}
+            <p class='text-danger'>{{fullname}}</p>
+          {{/if}}
+          <label for="inputLasttName">Họ và tên * </label>
+          <input name="fullname" type="text" value="{{user._fullname}}">
+        </div>
+        <div class='form-group'>
+          <label for="checkGender">Giới tính</label>
+          <div id='checkGender'>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Nam </label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Nữ</label>
+            </div>
+          </div>
+            
+        </div>
+        <div class='form-group'>
+          <label for="inputBirthday">Ngày sinh</label>
+          <input name="bod" type="text" value="{{user._birthOfDay}}">
+        </div>
+        
+        <div class='form-group'>
+          {{#if phone}}
+          <p class='text-danger'>{{phone}}</p>
+          {{/if}}
+          <label for="inputPhone">Số điện thoại *</label>
+          <input name="phone" type="text" value="{{user._phone}}"> 
+        </div>
+      {{!-- </form>
+      <form> --}}
+        <div class='form-group'>
+          {{#if email}}
+            <p class='text-danger'>{{email}}</p>
+          {{/if}}
+          <label for="inputEmail">Email *</label>
+          <input name="email" type="text" value="{{user._email}}">
+        </div>
+        <div class='form-group'>
+          <label for="inputAddress1">Địa chỉ</label>
+          <input name="address" type="text" value="{{user._address}}">
+        </div>
+        <button id='btn-saveInformation' type="submit" class='btn btn-primary'>Thay đổi thông tin</button>
+      </form>
+    </div>
+    <div class="form-two">
+      {{#if change_pass_success}}
+        <div class="alert alert-success">{{change_pass_success}}</div>
+      {{/if}}
+      <form method="POST" action="/profile/changePass?uid={{user._userID}}">
+        <div class='form-group'>
+          {{#if oldPass}}
+            <p class='text-danger'>{{oldPass}}</p>
+          {{/if}}
+          <label>Password cũ *</label>
+          <input name="oldPass" type="password">
+        </div>
+        <div class='form-group'>
+          {{#if newPass}}
+            <p class='text-danger'>{{newPass}}</p>
+          {{/if}}
+          <label>Password mới *</label>
+          <input name="newPass" type="password">
+        </div>
+        <div class='form-group'>
+          {{#if confirmPass}}
+            <p class='text-danger'>{{confirmPass}}</p>
+          {{/if}}
+          <label for="inputEmail">Xác nhận Password *</label>
+          <input name="confirmPass" type="password">
+        </div>
+        <button id='btn-savePass' type="submit" class='btn btn-primary'>Thay đổi password</button>
+      </form>
+    </div>
+  </div>  
+</div>

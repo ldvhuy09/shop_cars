@@ -11,7 +11,8 @@ var expressValid = require('express-validator');
 var flash = require('connect-flash');
 var session = require('express-session');
 var paginate = require('express-paginate');
-var guestController = require('./app_server/controllers/guestController');
+var mysql = require('mysql');
+var MySQLStore = require('express-mysql-session')(session);
 
 //INIT APP EXPRESS
 var app = express();
@@ -41,12 +42,24 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
+var option = {
+    host: 'ldvhuy09',
+    port: '3306',
+    user: 'root',
+    password: '123456',
+    database: 'CAR_SHOP'
+};
+
+var sessionStore = new MySQLStore(option);
+
 
 // Express Session
 app.use(session({
     secret: 'secret',
     saveUninitialized: true,
-    resave: true
+    resave: true,
+    store: sessionStore,
+    cookie: {maxAge: 180 * 60 * 1000}
 }));
 
 // Passport init
@@ -75,9 +88,12 @@ app.use(flash());
 // Global Vars
 app.use(function (req, res, next) {
     res.locals.signup_success = req.flash('signup_success');
+    res.locals.update_success = req.flash('update_success');
+    res.locals.change_pass_success = req.flash('change_pass_success');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
     res.locals.user = req.user || null;
+    res.locals.session = req.session;
     next();
 });
 
