@@ -1,0 +1,67 @@
+<section id="cart_items">
+  <div class="container">
+    <div class='row'>
+      <div class='col-md-8 col-sm-12'>
+        <div class="table-responsive cart_info">
+          <table class="table table-condensed">
+            <thead>
+              <tr class="cart_menu">
+                <td class="image">Mặt hàng</td>
+                <td class="description"></td>
+                <td class="price">Giá</td>
+                <td class="quantity">Số lượng</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each items}}
+              <tr>
+                <td class="cart_product">
+                  <a href=""><img src="{{this.item._link}}" alt=""></a>
+                </td>
+                <td class="cart_description">
+                  <h4><a href="">{{this.item._name}}</a></h4>
+                    <p>ID: {{this.item._productID}}</p>
+                </td>
+                <td class="cart_price">
+                  <p>{{this.price}} đ</p>
+                </td>
+                <td class="cart_quantity">
+                  <div class="cart_quantity_button">
+                    <a class="cart_quantity_up" href=""> + </a>
+                    <input class="cart_quantity_input" type="text" name="quantity" value="{{this.qty}}" autocomplete="off" size="2">
+                    <a class="cart_quantity_down" href=""> - </a>
+                  </div>
+                </td>
+                <td class="cart_delete">
+                  <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>      
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="total_area">
+          <div class='row'>
+            <ul>
+              <li>Tạm tính <span>{{totalPrice}} đ</span></li>
+              <li>Phí vận chuyển <span>0 đ</span></li>
+              <li>Giảm giá <span>0 đ</span></li>
+              <li>Tổng cộng (đã có VAT) <span>{{totalPrice}} đ</span></li>
+            </ul>
+          </div>
+          <div class='row'>
+            <div class='col-md-6 col-sm-12'>
+              <a class="btn btn-default update" href="">Cập nhật</a>
+            </div>
+            <div class='col-md-6 col-sm-12'>
+              <a class="btn btn-default check_out" href="checkout-step1.html">Thanh toán</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+</section> <!--/#cart_items-->

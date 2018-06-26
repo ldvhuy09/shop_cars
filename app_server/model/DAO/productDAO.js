@@ -20,6 +20,10 @@ exports.ProductDAO = function() {
     sql = `insert into ${this.nameTable}(${this.col_id}, _name, _type, _brand, _origin, _quantity, _viewed, _price, _link) values(\"${newProduct.id}\", \"${newProduct.name}\", \"${newProduct.type}\", \"${newProduct.brand}\", \"${newProduct.origin}\", ${newProduct.quantity}, ${newProduct.viewed}, ${newProduct.price}, \"${newProduct.link}\")`;
     return db.save(sql);
   };
+  this.getSingle = function(id) {
+    sql = `select * from ${this.nameTable} where ${this.col_id} = ${id}`;
+    return db.load(sql);
+  };
   this.update = function(product) {
     sql = `update ${this.nameTable} set _name = \"${product.name}\",  _type = \"${product.type}\",  _brand = \"${product.brand}\",  _origin = \"${product.origin}\", _quantity = ${product.quantity},  _viewed = ${product.viewed},  _price = ${product.price},  _link = \"${product.link}\" where ${this.col_id} = \"${product.id}\"`
     return db.save(sql);

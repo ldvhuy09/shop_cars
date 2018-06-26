@@ -55,7 +55,11 @@
 							<ul class="nav navbar-nav">
                 <li><a href="admin.html"><i class="fa fa-user"></i> Admin</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                {{#if user}}
+								<li><a href="/cart?uid={{user._userID}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                {{else}}
+                <li><a href="/cart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                {{/if}}
                 {{#if user}}
                 <li><a href="/profile?uid={{user._userID}}"><i class="fa fa-user"></i>Chào {{user._userID}}</a></li>
 								<li><a href="/logout"><i class="fa fa-lock"></i> Đăng xuất</a></li>

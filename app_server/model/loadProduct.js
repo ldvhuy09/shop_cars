@@ -67,3 +67,13 @@ exports.loadDetail = (id, type, brand) => {
     });
   });
 };
+
+exports.findById = (id) => {
+  return new Promise((resolve, reject) => {
+    dataProduct.getSingle(id).then(result => {
+      resolve(result[0]);
+    }).catch(err => {
+      reject(err);
+    })
+  })
+}

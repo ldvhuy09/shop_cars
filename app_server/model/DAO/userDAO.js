@@ -14,7 +14,7 @@ exports.userDAO = function() {
   this.nameTable = "_USER";
   this.col_id = "_userID";
   this.add = function(newUser) {
-    sql = `insert into _USER(_userID, _password, _fullname, _email) values(\"${newUser.uid}\", \"${newUser.pwd}\", N\"${newUser.name}\", \"${newUser.email}\")`;
+    sql = `insert into _USER(_userID, _password, _fullname, _email) values(\"${newUser.uid}\", \"${newUser.pwd}\", \"${newUser.name}\", \"${newUser.email}\")`;
     return db.save(sql);
   };
   this.update = function(user) {
@@ -24,7 +24,7 @@ exports.userDAO = function() {
   this.updatePassword = function(uid, pwd) {
     sql = `update ${this.nameTable} set _password = \"${pwd}\" where ${this.col_id} = \"${uid}\"`;
     return db.save(sql);
-  }
+  };
   this.findByID = function(id, callback) {
     sql = sql = `select * from ${this.nameTable} where ${this.col_id} = \"${id}\"`;
     db.load(sql).then(rows => {

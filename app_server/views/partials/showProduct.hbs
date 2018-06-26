@@ -6,7 +6,7 @@
           <h2>{{_price}} VNĐ</h2>
           <p>{{_name}}</p>
           <div class="row">
-            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+            <a href="/product/add-to-cart?pid={{this._productID}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
             <a href="/product/detail-product?id={{this._productID}}&brand={{this._brand}}&type={{this._type}}" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>Chi tiết</a>
           </div>
         </div>

@@ -106,6 +106,7 @@ app.use(paginate.middleware(10, 50));
 app.use(require('./app_server/routes/homeRoute'));
 app.use(require('./app_server/routes/productRoute'));
 app.use(require('./app_server/routes/userRoute'));
+app.use(require('./app_server/routes/cartRoute'));
 
 //LISTEN PORT 8001
 app.listen(8001, () => {
