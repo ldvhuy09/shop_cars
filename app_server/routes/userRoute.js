@@ -26,6 +26,6 @@ router.post('/profile/changePass', userCtrl.changePassword);
 //process form login + signup
 router.post('/signup', userCtrl.signup);
 
-router.post('/login', passport.authenticate('local', {successRedirect: '/', failureRedirect: '/login', failureFlash: true}), userCtrl.login);
+router.post('/login', passport.authenticate('local', {successRedirect: '/loggedin', failureRedirect: '/login', failureFlash: true}), userCtrl.login);
 
 module.exports = router;

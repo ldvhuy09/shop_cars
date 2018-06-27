@@ -1,6 +1,7 @@
 var dbUser = require('../model/User');
 var User = require('../model/DAO/userDAO').User;
 var bcrypt = require('bcryptjs');
+var userSession = require('../model/UserSession');
 
 var signupValid = (req) => {
   return new Promise((resolve, reject) => {
@@ -85,11 +86,18 @@ exports.login = (req, res) => {
 }
 
 exports.logout = (req, res) => {
-  req.logout();
-
-	req.flash('success_msg', 'You are logged out');
-
-	res.redirect('/');
+  userSession.saveSessionDataForUser(req.user._userID, JSON.stringify(req.session)).then(result => {
+    req.logout();
+    req.session.destroy(function(err) {
+      if (err) console.log(err);
+      res.redirect('/');
+    });
+  }).catch(err => {
+    if (err){
+      console.log(err);
+    }
+    res.redirect('/');
+  })
 }
 
 exports.getProfilePage = (req, res) => {

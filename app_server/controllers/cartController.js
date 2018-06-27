@@ -8,7 +8,6 @@ exports.addToCart = (req, res) => {
   dbProduct.findById(productId).then(result => {
     cart.add(result, productId);
     req.session.cart = cart;
-    console.log(req.session.cart);
     res.redirect('/');
   }).catch(err => {
     console.log(err);

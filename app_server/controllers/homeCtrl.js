@@ -7,7 +7,6 @@ exports.index = function(req, res) {
   sortBy = req.query.sortBy ? req.query.sortBy : '_storeDate';
   order = req.query.order ? req.query.order : 'DESC';
   url = req.baseUrl + req.path ;
-  console.log(req.originalUrl);
   loadContent.dataHomePage(limit, offset, sortBy, order).then(result => {
     res.render('home/index', {
       menu: result.menu,
