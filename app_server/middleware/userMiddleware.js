@@ -15,8 +15,6 @@ exports.checkSession = (req, res, next) => {
       if (result) {
         dataSession = JSON.parse(result.dataSession);
         userSession.updateDataSessionInSessionTable(req.session.id, JSON.stringify(dataSession)).then(result => {
-          console.log(req.session.id);
-          console.log(dataSession);
           req.session.reload (function(err) {
             if (err) console.log(err);
             return next();

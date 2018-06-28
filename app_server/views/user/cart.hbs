@@ -28,13 +28,13 @@
                 </td>
                 <td class="cart_quantity">
                   <div class="cart_quantity_button">
-                    <a class="cart_quantity_up" href=""> + </a>
+                    <a class="cart_quantity_up" href="/cart/add-to-cart?pid={{this.item._productID}}"> + </a>
                     <input class="cart_quantity_input" type="text" name="quantity" value="{{this.qty}}" autocomplete="off" size="2">
-                    <a class="cart_quantity_down" href=""> - </a>
+                    <a class="cart_quantity_down" href="/cart/delete-from-cart?pid={{this.item._productID}}&qty=1"> - </a>
                   </div>
                 </td>
                 <td class="cart_delete">
-                  <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                  <a class="cart_quantity_delete" href="/cart/delete-from-cart?pid={{this.item._productID}}&qty={{this.qty}}"><i class="fa fa-times"></i></a>
                 </td>
               </tr>
               {{/each}}
@@ -57,7 +57,7 @@
               <a class="btn btn-default update" href="">Cập nhật</a>
             </div>
             <div class='col-md-6 col-sm-12'>
-              <a class="btn btn-default check_out" href="checkout-step1.html">Thanh toán</a>
+              <a class="btn btn-default check_out" href="/checkout">Thanh toán</a>
             </div>
           </div>
         </div>

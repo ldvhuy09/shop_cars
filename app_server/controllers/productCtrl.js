@@ -2,7 +2,7 @@ var loadContent = require('../model/loadContentPage');
 var paginate = require('express-paginate');
 
 exports.detailProduct = (req, res) => {
-  loadContent.detailProductPage(parseInt(req.query.id), req.query.type, req.query.brand).then (result => {
+  loadContent.detailProductPage(parseInt(req.query.pid), req.query.type, req.query.brand).then (result => {
     res.render('products/detailProductPage', result);
   });
 };

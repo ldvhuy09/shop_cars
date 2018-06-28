@@ -2,18 +2,29 @@ var Cart = require('../model/Cart');
 var dbProduct = require('../model/loadProduct');
 
 exports.addToCart = (req, res) => {
-  var productId = parseInt(req.query.pid);
+  var pid = req.query.pid;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
 
-  dbProduct.findById(productId).then(result => {
-    cart.add(result, productId);
+  dbProduct.findById(pid).then(result => {
+    cart.add(result, pid);
     req.session.cart = cart;
-    res.redirect('/');
+    res.redirect('back');
   }).catch(err => {
     console.log(err);
     res.redirect('/');
   });
 };
+
+exports.deleteFromCart = (req, res) => {
+  var pid = req.query.pid;
+  var qty = parseInt(req.query.qty);
+  if (qty > 0) {
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+    cart.delete(pid, qty);
+    req.session.cart = cart;
+  }
+  res.redirect('back');
+}
 
 exports.getCartPage = (req, res) => {
   var cart = new Cart(req.session.cart ? req.session.cart : {});
