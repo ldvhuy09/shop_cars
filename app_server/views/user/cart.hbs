@@ -1,5 +1,12 @@
 <section id="cart_items">
   <div class="container">
+    {{#if msg}}
+    <div class="row">
+      <div class="alert alert-danger">
+        {{msg}}
+      </div>
+    </div>
+    {{/if}}
     <div class='row'>
       <div class='col-md-8 col-sm-12'>
         <div class="table-responsive cart_info">

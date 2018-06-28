@@ -1,9 +1,19 @@
 var loadContent = require('../model/loadContentPage');
+var dbProduct = require('../model/loadProduct');
 var paginate = require('express-paginate');
 
 exports.detailProduct = (req, res) => {
-  loadContent.detailProductPage(parseInt(req.query.pid), req.query.type, req.query.brand).then (result => {
-    res.render('products/detailProductPage', result);
+  pid = parseInt(req.query.pid);
+  type = req.query.type;
+  brand = req.query.brand;
+  loadContent.detailProductPage(pid, type, brand).then (result => {
+    dbProduct.updateView(pid).then(none  => {
+      res.render('products/detailProductPage', result);
+    }).catch (err => {
+      console.log(err);
+    });
+  }).catch(err => {
+    console.log(err);
   });
 };
 

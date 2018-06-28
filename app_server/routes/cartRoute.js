@@ -12,7 +12,7 @@ router.get('/product/detail-product/add-to-cart', middleware.authentication, car
 
 router.get('/cart/delete-from-cart', middleware.authentication, cartCtrl.deleteFromCart);
 
-router.get('/cart', middleware.authentication, cartCtrl.getCartPage);
+router.get('/cart', middleware.authentication, middleware.checkCart, cartCtrl.getCartPage);
 
 module.exports = router;
 

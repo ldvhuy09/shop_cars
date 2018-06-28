@@ -1,0 +1,51 @@
+<section>
+  <div class="container">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Chi tiết đơn hàng</div>
+      <div class="panel-body">
+        <p><b>Người nhận: </b>{{receiverName}}</p>
+        <p><b>Số điện thoại: </b>{{receiverPhone}}</p>
+        <p><b>Đại chỉ: </b>{{receiverAddress}}</p>
+      </div>
+
+      <!-- Table -->
+      
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th scope="col">Sản phẩm</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Số lượng</th>
+            <th scope="col">Tạm tính</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each items}}
+          <tr>
+            <td>{{this.item._name}}</td>
+            <td>{{this.item._price}}</td>
+            <td>{{this.qty}}</td>
+            <td>{{this.price}}</td>
+          </tr>
+          {{/each}}
+          <tr>
+            <td><b>Tổng cộng</b></td>
+            <td></td>
+            <td>{{this.totalQty}}</td>
+            <td>{{this.totalPrice}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class='row'>
+      <div class='col-md-offset-8 col-md-4 col-sm-12'>
+        {{#if success_order}}
+        <a class="btn btn-default check_out" href="/">Tiếp tục mua hàng</a>
+        {{else}}
+        <a class="btn btn-default check_out" href="/checkout/finish">Đặt hàng</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

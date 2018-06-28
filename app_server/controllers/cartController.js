@@ -27,7 +27,7 @@ exports.deleteFromCart = (req, res) => {
 }
 
 exports.getCartPage = (req, res) => {
-  var cart = new Cart(req.session.cart ? req.session.cart : {});
+  cart = new Cart(req.session.cart);
   res.render('user/cart', {
     items: cart.generateArray(),
     totalPrice: cart.totalPrice,

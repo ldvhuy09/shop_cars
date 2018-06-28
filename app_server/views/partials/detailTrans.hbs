@@ -1,0 +1,47 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Chi tiết đơn hàng</div>
+  <div class="panel-body">
+    <p><b>Người nhận: </b>{{_receiverName}}</p>
+    <p><b>Số điện thoại: </b>{{_phone}}</p>
+    <p><b>Đại chỉ: </b>{{_receiverAddress}}</p>
+    <p><b>Ngày đặt hàng: </b>{{_orderDate}}</p>
+    <p><b>Trạng thái: </b>
+    {{#if _state}}
+      Đã giao hàng
+    {{else}}
+      Chưa giao hàng
+    {{/if}}
+    </p>
+
+  </div>
+
+  <!-- Table -->
+  
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th scope="col">Sản phẩm</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Số lượng</th>
+        <th scope="col">Tạm tính</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each _listProduct}}
+      <tr>
+        <td>{{this.item._name}}</td>
+        <td>{{this.item._price}}</td>
+        <td>{{this.qty}}</td>
+        <td>{{this.price}}</td>
+      </tr>
+      {{/each}}
+      <tr>
+        <td><b>Tổng cộng</b></td>
+        <td></td>
+        <td></td>
+        <td>{{this._totalPrice}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

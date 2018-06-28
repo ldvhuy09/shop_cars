@@ -2,6 +2,15 @@ var dbUser = require('../model/User');
 var User = require('../model/DAO/userDAO').User;
 var bcrypt = require('bcryptjs');
 var userSession = require('../model/UserSession');
+var dbOrder = require('../model/OrderModel');
+
+var toArray = (obj) => {
+  var arr = [];
+  for (var id in obj.items) {
+    arr.push(obj.items[id]);
+  }
+  return arr;
+}
 
 var signupValid = (req) => {
   return new Promise((resolve, reject) => {
@@ -101,13 +110,35 @@ exports.logout = (req, res) => {
 }
 
 exports.getProfilePage = (req, res) => {
-  var content = {};
   dbUser.getUserByUsername(req.query.uid).then(result => {
     res.render('user/profile', {
       user: result
+    });
+  });
+};
+
+exports.getHistoryTransPage = (req, res) => {
+  uid = req.user._userID;
+  dbOrder.loadSummaryOrder(uid).then(rows => {
+    res.render('user/histran', {
+      listTrans: rows
     })
-  })
-}
+  }).catch(err => {
+    console.log(err);
+  });
+};
+
+exports.getDetailHisTran = (req, res) => {
+  oid = req.params.oid;
+  dbOrder.loadOrder(oid).then(order => {
+    listProductObj = JSON.parse(order[0]._listProduct);
+    order[0]._listProduct = toArray(listProductObj);
+    // console.log(order[0]);
+    res.render('user/detailTrans', order[0]);
+  }).catch(err => {
+    console.log(err);
+  });
+};
 
 exports.updateProfile = (req, res) => {
   var fullname = req.body.fullname;

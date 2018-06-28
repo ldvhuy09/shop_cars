@@ -1,3 +1,4 @@
+var db = require('../fn/db');
 var ProductDAO = require('./DAO/productDAO').ProductDAO;
 var async = require('async');
 
@@ -77,3 +78,22 @@ exports.findById = (id) => {
     })
   })
 }
+
+exports.updateView = (pid) => {
+  return new Promise ((resolve, reject) => {
+    sqlLoadViews = `select _viewed from _PRODUCT where _productID = ${pid}`;
+    db.load(sqlLoadViews).then(result => {
+      console.log(result);
+      views = parseInt(result[0]._viewed);
+      views++;
+      sqlUpdateViews = `update _PRODUCT set _viewed = ${views} where _productID = ${pid}`;
+      db.save(sqlUpdateViews).then(nothing => {
+        resolve();
+      }).catch(err => {
+        if (err) reject(err);
+      });
+    }).catch(err => {
+      if (err) reject(err);
+    });
+  });  
+};

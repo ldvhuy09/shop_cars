@@ -16,13 +16,15 @@ passport.deserializeUser(userCtrl.deserializeUser);
 //get pages for user
 router.get('/login', userCtrl.getLoginPage);
 
-router.get('/logout', userCtrl.logout);
+router.get('/logout', middleware.authentication, userCtrl.logout);
 
 router.get('/profile', middleware.authentication, userCtrl.getProfilePage);
+router.get('/profile/history-transaction', middleware.authentication, userCtrl.getHistoryTransPage);
+router.get('/profile/history-transaction/:oid', middleware.authentication, userCtrl.getDetailHisTran);
 
 //process form udpate profile
-router.post('/profile/update', userCtrl.updateProfile);
-router.post('/profile/changePass', userCtrl.changePassword);
+router.post('/profile/update', middleware.authentication, userCtrl.updateProfile);
+router.post('/profile/changePass', middleware.authentication, userCtrl.changePassword);
 //process form login + signup
 router.post('/signup', userCtrl.signup);
 

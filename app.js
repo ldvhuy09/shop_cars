@@ -92,6 +92,7 @@ app.use(function (req, res, next) {
     res.locals.change_pass_success = req.flash('change_pass_success');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
+    res.locals.success_order = req.flash('success_order');
     res.locals.user = req.user || null;
     res.locals.session = req.session;
     next();

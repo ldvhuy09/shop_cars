@@ -31,4 +31,14 @@ exports.checkSession = (req, res, next) => {
       }
     });
   } else return next();
+};
+
+exports.checkCart = (req, res, next) => {
+  if(req.session.cart) next();
+  else {
+    res.render('user/cart', {
+      msg: "Chưa có sản phẩm nào được chọn"
+    })
+  }
 }
+

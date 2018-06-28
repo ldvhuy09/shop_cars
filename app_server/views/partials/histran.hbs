@@ -1,0 +1,30 @@
+<div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th scope="col">Mã đơn hàng</th>
+        <th scope="col">Ngày đặt hàng</th>
+        <th scope="col">Người nhận</th>
+        <th scope="col">Tổng tiền</th>
+        <th scope="col">Trạng thái</th>
+        <th scope="col">Chi tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each listTrans}}
+      <tr>
+        <td><a href="/profile/history-transaction/{{this._orderID}}">{{this._orderID}}</a></td>
+        <td>{{this._orderDate}}</td>
+        <td>{{this._receiverName}}</td>
+        <td>{{this._totalPrice}}</td>
+        {{#if this._state}}
+          <td>Đã giao hàng</td>
+        {{else}}
+          <td>Chưa giao hàng</td>
+        {{/if}}
+        <td><a href="/profile/history-transaction/{{this._orderID}}">Chi tiết</a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
