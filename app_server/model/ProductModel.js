@@ -4,6 +4,11 @@ var async = require('async');
 
 var dataProduct = new ProductDAO();
 
+exports.loadAll = () => {
+  sql = `select * from _PRODUCT`;
+  return db.load(sql);
+}
+
 /* load all product and count*/
 exports.loadProduct = (limit=9, offset=0, sortBy='_storeDate', order='DESC') => {
   return new Promise((resolve, reject) => {

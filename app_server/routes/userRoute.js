@@ -14,7 +14,7 @@ passport.serializeUser(userCtrl.serializeUser);
 passport.deserializeUser(userCtrl.deserializeUser);
 
 //get pages for user
-router.get('/login', userCtrl.getLoginPage);
+router.get('/login',  userCtrl.getLoginPage);
 
 router.get('/logout', middleware.authentication, userCtrl.logout);
 

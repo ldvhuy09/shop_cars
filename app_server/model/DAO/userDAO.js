@@ -14,7 +14,7 @@ exports.userDAO = function() {
   this.nameTable = "_USER";
   this.col_id = "_userID";
   this.add = function(newUser) {
-    sql = `insert into _USER(_userID, _password, _fullname, _email) values(\"${newUser.uid}\", \"${newUser.pwd}\", \"${newUser.name}\", \"${newUser.email}\")`;
+    sql = `insert into _USER(_userID, _password, _fullname, _email, _role) values(\"${newUser.uid}\", \"${newUser.pwd}\", \"${newUser.name}\", \"${newUser.email}\", 0)`;
     return db.save(sql);
   };
   this.update = function(user) {

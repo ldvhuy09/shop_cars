@@ -1,0 +1,11 @@
+<div class='right_col' role='main'>
+  <!-- top tiles -->
+  <div class="row">
+    <a href="/admin/trans"><button type="button" class="btn btn-primary btn-lg">Quay lại</button></a>
+  </div>
+  <div class="row">
+    {{#with order}}
+    {{> detailTrans}}
+    {{/with}}
+  </div>  
+</div>

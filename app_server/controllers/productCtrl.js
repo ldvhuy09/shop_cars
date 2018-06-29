@@ -1,5 +1,5 @@
 var loadContent = require('../model/loadContentPage');
-var dbProduct = require('../model/loadProduct');
+var dbProduct = require('../model/ProductModel');
 var paginate = require('express-paginate');
 
 exports.detailProduct = (req, res) => {

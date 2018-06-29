@@ -1,5 +1,5 @@
-var loadMenu = require('./loadMenu');
-var loadProduct = require('./loadProduct');
+var loadMenu = require('./MenuModel');
+var loadProduct = require('./ProductModel');
 var async = require('async');
 var paginate = require('express-paginate');
 

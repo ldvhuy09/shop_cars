@@ -1,6 +1,6 @@
 var dbOrder = require('../model/OrderModel');
 var dbSession = require('../model/UserSession');
-var Cart = require('../model/Cart');
+var Cart = require('../model/CartModel');
 
 var checkoutInforValid = (req) => {
   return new Promise ((resolve, reject) => {

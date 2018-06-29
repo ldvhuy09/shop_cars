@@ -7,7 +7,7 @@ exports.interfaceDAO = function () {
   this.getAll = function() {
     sql = `select * from ${this.nameTable}`;
     return db.load(sql);
-  }
+  };
   this.getItems = function(limit=9, offset=0, sortBy=null, order='DESC') {
     if (sortBy === null) orderBy = this.col_id;
     sqlLoadItem = `select * from ${this.nameTable} order by ${sortBy} ${order} limit ${limit} offset ${offset}`;

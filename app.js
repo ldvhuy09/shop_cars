@@ -109,6 +109,7 @@ app.use(require('./app_server/routes/productRoute'));
 app.use(require('./app_server/routes/userRoute'));
 app.use(require('./app_server/routes/cartRoute'));
 app.use(require('./app_server/routes/checkoutRoute'));
+app.use(require('./app_server/routes/adminRoute'));
 
 //LISTEN PORT 8001
 app.listen(8001, () => {

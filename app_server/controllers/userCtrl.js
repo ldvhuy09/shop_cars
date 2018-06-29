@@ -1,4 +1,4 @@
-var dbUser = require('../model/User');
+var dbUser = require('../model/UserModel');
 var User = require('../model/DAO/userDAO').User;
 var bcrypt = require('bcryptjs');
 var userSession = require('../model/UserSession');

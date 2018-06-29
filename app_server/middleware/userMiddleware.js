@@ -40,5 +40,12 @@ exports.checkCart = (req, res, next) => {
       msg: "Chưa có sản phẩm nào được chọn"
     })
   }
-}
+};
+
+exports.isAdmin = (req, res, next) => {
+  if (req.user._role > 0) next();
+  else {
+    res.redirect('/');
+  }
+};
 

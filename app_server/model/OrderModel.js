@@ -15,7 +15,21 @@ exports.loadOrder = (oid) => {
   return db.load(sql);
 }
 
+exports.loadAllOrder = () => {
+  sql = `select * from _ORDER order by _orderDate DESC`;
+  return db.load(sql)
+}
+
 exports.saveNewOrder = (order) => {
   sql = `insert into _ORDER value(NULL, \'${order.uid}\', 0, \'${order.receiverName}\', \'${order.receiverAddress}\', \'${order.receiverPhone}\', \'${order.orderDate}\', ${order.totalPrice}, \'${order.listProduct}\');`;
   return db.save(sql);
 };
+
+exports.updateStateOrder = (oid) => {
+  sql = `update _ORDER set _state = 1 where _orderID = ${oid}`;
+  return db.save(sql);
+}
+exports.deleteOrder = (oid) => {
+  sql = `delete from _ORDER where _orderID = ${oid}`;
+  return db.save(sql);
+}

@@ -8,8 +8,8 @@ router.get('/', function (req, res) {
   res.redirect('/home');
 });
 
-router.get('/loggedin', middleware.checkSession, function (req, res) {
-  res.redirect('/home');
+router.get('/loggedin', middleware.checkSession, middleware.isAdmin, function (req, res) {
+  res.redirect('/admin');
 });
 
 router.get('/home', ctrHome.index);

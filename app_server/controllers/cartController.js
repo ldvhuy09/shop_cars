@@ -1,5 +1,5 @@
-var Cart = require('../model/Cart');
-var dbProduct = require('../model/loadProduct');
+var Cart = require('../model/CartModel');
+var dbProduct = require('../model/ProductModel');
 
 exports.addToCart = (req, res) => {
   var pid = req.query.pid;

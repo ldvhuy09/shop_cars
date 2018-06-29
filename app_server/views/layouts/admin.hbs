@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin - Dashboard</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/nprogress.css" rel="stylesheet">
+    <link href="/assets/css/green.css" rel="stylesheet">
+    <link href="/assets/css/custom.min.css" rel="stylesheet">
+
+</head>
+
+<body class='nav-md'>
+    <div class='container body'>
+        <div class='main_container'>
+            <!-- sidebar menu  -->
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/" class="site_title"><i class="fa fa-paw"></i> <span>CarShop</span></a>
+                    </div>
+        
+                    <div class="clearfix"></div>
+        
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>{{user._fullname}}</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+        
+                    <br />
+        
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Dashboard</h3>
+                            <ul class="nav side-menu">
+                                <li><a href='/'><i class="fa fa-home"></i> Home </a></li>
+                                <li><a href='/admin'><i class="fa fa-home"></i> Dashboard </a></li>
+                                <li><a href='/admin/trans'><i class="fa fa-table"></i> Quản lý đơn hàng </a></li>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Quản lý sản phẩm <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="/admin/product">Theo sản phẩm</a></li>
+                                        <li><a href="/admin/type">Theo loại</a></li>
+                                        <li><a href="/admin/product">Theo nhà sản xuất</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>        
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+            <!-- /sidebar menu  -->
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+        
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                {{user._userID}}
+                                <span class=" fa fa-angle-down"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li><a href="/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+        
+                        <li role="presentation" class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-green">2</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            {{{body}}}
+            <!-- page content -->
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/assets/js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/assets/js/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="/assets/js/icheck.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="/assets/js/custom.min.js"></script>
+	  <script src="/assets/js/custom.js"></script>		
+</body>
+</html>

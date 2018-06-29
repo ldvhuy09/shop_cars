@@ -1,0 +1,60 @@
+<div class='right_col' role='main'>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Đơn đặt hàng gần đây</h2>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="table-responsive">
+                    <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                            <tr class="headings">
+
+                            <th class="column-title">ID đơn hàng</th>
+                            <th class="column-title">Ngày đặt hàng </th>
+                            <th class="column-title">Người dùng </th>
+                            <th class="column-title">Tiền</th>
+                            <th class="column-title">Trạng thái</th>
+                            <th class="column-title">Cập nhật</th>
+                            <th class="column-title">Hủy đơn hàng</th>
+                            <th class="column-title">Xem chi tiết</th>
+                            </th>
+                            <th class="bulk-actions" colspan="7">
+                                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                            </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                          {{#each orders}}
+                            {{#if this._state}}
+                            <tr class="success">
+                            {{else}}
+                            <tr class="danger">
+                            {{/if}}
+                            <td class=" "><a href="/admin/trans/detail?oid={{this._orderID}}">{{this._orderID}}</a></td>
+                            <td class=" ">{{this._orderDate}}</td>
+                            <td class=" ">{{this._userID}}</td>
+                            <td class="a-right a-right ">{{this._totalPrice}}</td>
+                            {{#if this._state}}
+                              <td class=" ">Đã giao hàng</td>
+                              <td class=" "></td>
+                              <td class=" "></td>
+                            {{else}}
+                              <td class=" ">Chưa giao hàng</td>
+                              <td class=" "><a href="/admin/trans/update?oid={{this._orderID}}"><button type="button" class="btn btn-success btn-sm">Đã giao hàng</button></a></td>
+                              <td class=" "><a href="/admin/trans/delete?oid={{this._orderID}}"><button type="button" class="btn btn-dark btn-sm">Hủy đơn hàng</button></a></td>                           
+                            {{/if}}
+                              <td class=" "><a href="/admin/trans/detail?oid={{this._orderID}}"><button type="button" class="btn btn-warning btn-sm">Xem chi tiết</button></a></td>
+                            </td>
+                            </tr>
+                          {{/each}}
+                        </tbody>
+                    </table>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>

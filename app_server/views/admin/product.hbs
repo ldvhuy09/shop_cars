@@ -1,0 +1,55 @@
+<div class='right_col' role='main'>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Đơn đặt hàng gần đây</h2>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="table-responsive">
+                    <table class="table table-striped jambo_table bulk_action">
+                        <thead>
+                            <tr class="headings">
+
+                            <th class="column-title">ID </th>
+                            <th class="column-title">Tên sản phẩm </th>
+                            <th class="column-title">Loại </th>
+                            <th class="column-title">Thương hiệu </th>
+                            <th class="column-title">Xuất xứ </th>
+                            <th class="column-title">Giá </th>
+                            <th class="column-title">Đã bán </th>
+                            <th class="column-title">Còn lại </th>
+                            <th class="column-title">Số lượt view </th>
+                            <th class="column-title">Chỉnh sửa </th>
+                            <th class="column-title">Xóa sản phẩm </th>
+                            </th>
+                            <th class="bulk-actions" colspan="7">
+                                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                            </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                          {{#each products}}
+                            <tr>
+                            <td>{{this._productID}}</td>
+                            <td>{{this._name}}</td>
+                            <td>{{this._type}}</td>
+                            <td>{{this._brand}}</td>
+                            <td>{{this._origin}}</td>
+                            <td>{{this._price}}</td>
+                            <td>{{this._salesVolume}}</td>
+                            <td>{{this._quantity}}</td>
+                            <td>{{this._viewed}}</td>
+                            <td class=" "><a href="/admin/product/edit?oid={{this._productID}}"><button type="button" class="btn btn-success btn-sm">Chỉnh sửa</button></a></td>
+                            <td class=" "><a href="/admin/product/delete?oid={{this._productID}}"><button type="button" class="btn btn-dark btn-sm">Xóa</button></a></td>
+                            </tr>
+                          {{/each}}
+                        </tbody>
+                    </table>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
